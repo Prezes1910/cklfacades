@@ -59,7 +59,7 @@ const Header = () => {
                             loading="eager"
                             className="h-auto w-44"
                             alt="logo"
-                            src="../assets/logo.png"
+                            src="../assets/logoBrowser.png"
                         />
                     </Link>
                     <button

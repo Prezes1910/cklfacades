@@ -12,16 +12,6 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: `gatsby-source-datocms`,
-            options: {
-                apiToken: "",
-                environment: `main`,
-                previewMode: false,
-                disableLiveReload: false,
-                pageSize: 500,
-            },
-        },
-        {
             resolve: `gatsby-omni-font-loader`,
             options: {
                 enableListener: true,
@@ -31,8 +21,8 @@ module.exports = {
                 ],
                 web: [
                     {
-                        name: `Signika`,
-                        file: `https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500&display=swap`,
+                        name: `Rajdhani`,
+                        file: `https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap`,
                     },
                 ],
             },
