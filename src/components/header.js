@@ -32,7 +32,7 @@ const Header = () => {
         >
             <div
                 className={
-                    "realtive bg-transparent transition-colors duration-200 w-full"
+                    "absolute top-0 bg-transparent transition-colors duration-200 w-full"
                 }
             >
                 <div
@@ -45,8 +45,8 @@ const Header = () => {
                 <nav
                     className={
                         showMenu
-                            ? "max-w-screen-2xl mx-auto px-4 py-2 md:py-4 flex items-center justify-between w-full navTextColor bg-black/90 transition-colors duration-200"
-                            : "max-w-screen-2xl mx-auto px-4 py-2 md:py-2 flex items-center justify-between lg:px-[15%] w-full navTextColor transition-colors duration-200"
+                            ? "max-w-screen-2xl mx-auto px-4 py-2 md:py-4 flex items-center justify-between w-full navTextColor bg-gray-800 transition-colors duration-100 z-50"
+                            : "max-w-screen-2xl mx-auto px-4 py-2 md:py-2 flex items-center justify-between lg:px-[15%] w-full navTextColor transition-colors duration-100 z-50"
                     }
                 >
                     <Link
@@ -61,7 +61,15 @@ const Header = () => {
                                 src="../assets/logoBrowser.png"
                             />
                         </div>
-                        <p className={ showMenu ? "text-gray-100 font-bold":"txtLogoColor font-bold"}>CKL Facades</p>
+                        <p
+                            className={
+                                showMenu
+                                    ? "text-gray-100 font-bold"
+                                    : "txtLogoColor font-bold"
+                            }
+                        >
+                            CKL Facades
+                        </p>
                     </Link>
                     <button
                         aria-label="Menu"
@@ -99,8 +107,12 @@ const Header = () => {
                     >
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
-                                aria-label="Strona Główna"
-                                className=" font-bold txtLogoColor transition-colors duration-200"
+                                aria-label="Home"
+                                className={
+                                    navbar
+                                        ? "font-bold txtLogoColor transition-colors duration-200"
+                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                }
                                 to="/"
                             >
                                 Home
@@ -109,40 +121,62 @@ const Header = () => {
 
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
-                                aria-label="O Nas"
-                                className=" font-bold txtLogoColor transition-colors duration-200"
-                                to="/oNas"
+                                aria-label="About Us"
+                                className={
+                                    navbar
+                                        ? "font-bold txtLogoColor transition-colors duration-200"
+                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                }
+                                to="/"
                             >
                                 About
                             </Link>
                         </li>
                         <Link
                             to="/"
-                            className="hidden hover:scale-105 transition-transform duration-300 lg:flex h-auto w-16 mx-8 items-center justify-center"
+                            className={
+                                navbar
+                                    ? "flex-col hidden hover:scale-105 transition-all duration-300 lg:flex h-auto w-16 mx-8 items-center justify-center"
+                                    : "flex-col hidden hover:scale-105 transition-all duration-300 lg:flex h-auto w-32 mx-8 items-center justify-center"
+                            }
                             aria-label="logo"
                         >
                             <StaticImage
                                 quality={100}
                                 className="h-full w-full"
+                                placeholder="blurred"
                                 src="../assets/logoBrowser.png"
                             />
+                            <p className={
+                                    navbar
+                                        ? "hidden transition-all duration-200"
+                                        : "font-bold text-gray-300 transition-all duration-200 text-3xl w-max mt-6"
+                                }>CKL Facades</p>
                         </Link>
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
-                                aria-label="Oferta"
-                                className=" font-bold txtLogoColor transition-colors duration-200"
-                                to="/oferta"
+                                aria-label="Services"
+                                className={
+                                    navbar
+                                        ? "font-bold txtLogoColor transition-colors duration-200"
+                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                }
+                                to="/"
                             >
                                 Services
                             </Link>
                         </li>
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
-                                aria-label="Kontakt"
-                                className=" font-bold txtLogoColor transition-colors duration-200"
-                                to="/kontakt"
+                                aria-label="Contakt"
+                                className={
+                                    navbar
+                                        ? "font-bold txtLogoColor transition-colors duration-200"
+                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                }
+                                to="/"
                             >
-                                Kontakt
+                                Contakt
                             </Link>
                         </li>
                     </ul>
