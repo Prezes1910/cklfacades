@@ -65,7 +65,7 @@ const Header = () => {
                             className={
                                 showMenu
                                     ? "text-gray-100 font-bold"
-                                    : "text-gray-500 font-bold"
+                                    : "text-gray-500 hoverLink font-bold"
                             }
                         >
                             CKL Facades
@@ -110,8 +110,8 @@ const Header = () => {
                                 aria-label="Home"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 transition-colors duration-200"
-                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/"
                             >
@@ -124,8 +124,8 @@ const Header = () => {
                                 aria-label="About Us"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 transition-colors duration-200"
-                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/"
                             >
@@ -150,7 +150,7 @@ const Header = () => {
                             <p className={
                                     navbar
                                         ? "hidden transition-all duration-200"
-                                        : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1"
+                                        : "font-bold text-gray-300 hoverLink transition-all duration-200 text-2xl w-max -mt-1"
                                 }>CKL Facades</p>
                         </Link>
                         <li className="mx-8 my-2 px-2 py-2">
@@ -158,8 +158,8 @@ const Header = () => {
                                 aria-label="Services"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 transition-colors duration-200"
-                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/"
                             >
@@ -171,8 +171,8 @@ const Header = () => {
                                 aria-label="Contakt"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 transition-colors duration-200"
-                                        : "font-bold text-gray-300 transition-colors duration-200"
+                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/"
                             >

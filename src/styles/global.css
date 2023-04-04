@@ -10,7 +10,7 @@ body {
 .txtLogoColor{
     color: #303A42;
 }
-.txtLogoColor:hover{
+.hoverLink:hover{
     color: rgb(22, 133, 133);
 }
 .bgLogoColor{
