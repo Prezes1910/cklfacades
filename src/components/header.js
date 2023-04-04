@@ -105,7 +105,7 @@ const Header = () => {
                                 : "absolute top-full left-0 py-2 flex flex-col lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-center lg:top-0 lg:translate-y-0 lg:py-0 text-main text-center w-full opacity-0 -translate-y-full transition duration-100 -z-10 lg:z-10 lg:ml-8"
                         }
                     >
-                        <li className="mx-2 my-2 px-2 py-2">
+                        <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 aria-label="Home"
                                 className={
@@ -119,7 +119,7 @@ const Header = () => {
                             </Link>
                         </li>
 
-                        <li className="mx-2 my-2 px-2 py-2">
+                        <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 aria-label="About Us"
                                 className={
@@ -137,7 +137,7 @@ const Header = () => {
                             className={
                                 navbar
                                     ? "flex-col hidden transition-all duration-300 lg:flex h-auto w-16 mx-8 items-center justify-center"
-                                    : "flex-col hidden transition-all duration-300 lg:flex h-auto w-20 mx-8 items-center justify-center"
+                                    : "flex-col hidden transition-all duration-300 lg:flex h-auto w-20 mx-12 items-center justify-center"
                             }
                             aria-label="logo"
                         >
@@ -153,7 +153,7 @@ const Header = () => {
                                         : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1"
                                 }>CKL Facades</p>
                         </Link>
-                        <li className="mx-2 my-2 px-2 py-2">
+                        <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 aria-label="Services"
                                 className={
@@ -166,7 +166,7 @@ const Header = () => {
                                 Services
                             </Link>
                         </li>
-                        <li className="mx-2 my-2 px-2 py-2">
+                        <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 aria-label="Contakt"
                                 className={
