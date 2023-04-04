@@ -136,21 +136,21 @@ const Header = () => {
                             to="/"
                             className={
                                 navbar
-                                    ? "flex-col hidden transition-all duration-300 lg:flex h-auto w-16 mx-8 items-center justify-center"
-                                    : "flex-col hidden transition-all duration-300 lg:flex h-auto w-20 mx-12 items-center justify-center"
+                                    ? "flex-col hidden hover:scale-105 transition-all duration-300 lg:flex h-auto w-16 mx-8 items-center justify-center"
+                                    : "flex-col hidden hover:scale-105 transition-all duration-300 lg:flex h-auto w-20 mx-12 items-center justify-center"
                             }
                             aria-label="logo"
                         >
                             <StaticImage
                                 quality={100}
-                                className="h-full w-full hover:scale-105 transition-all duration-300"
+                                className="h-full w-full"
                                 placeholder="blurred"
                                 src="../assets/logoBrowser.png"
                             />
                             <p className={
                                     navbar
                                         ? "hidden transition-all duration-200"
-                                        : "font-bold text-gray-300 hoverLink transition-all duration-200 text-2xl w-max -mt-1"
+                                        : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1"
                                 }>CKL Facades</p>
                         </Link>
                         <li className="mx-8 my-2 px-2 py-2">
