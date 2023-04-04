@@ -110,7 +110,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Overview
                             </a>
@@ -119,7 +119,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Solutions
                             </a>
@@ -128,7 +128,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Pricing
                             </a>
@@ -137,7 +137,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Customers
                             </a>
@@ -154,7 +154,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 About
                             </a>
@@ -163,7 +163,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Investor Relations
                             </a>
@@ -172,7 +172,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Jobs
                             </a>
@@ -181,7 +181,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Press
                             </a>
@@ -190,7 +190,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Blog
                             </a>
@@ -207,7 +207,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Contact
                             </a>
@@ -216,7 +216,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Documentation
                             </a>
@@ -225,7 +225,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Chat
                             </a>
@@ -234,7 +234,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 FAQ
                             </a>
@@ -251,7 +251,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Terms of Service
                             </a>
@@ -260,7 +260,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Privacy Policy
                             </a>
@@ -269,7 +269,7 @@ const Footer = () => (
                         <div>
                             <a
                                 href="#"
-                                class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                                class="text-gray-400 transition duration-100 hoverLink active:text-gray-500"
                             >
                                 Cookie settings
                             </a>
