@@ -3,9 +3,7 @@ import Layout from "../components/layout";
 
 const Admin = () => (
     <Layout>
-        <section>
-           
-        </section>
+        <h1>hello</h1>
     </Layout>
 );
 

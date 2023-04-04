@@ -6,7 +6,8 @@ import Seo from "../components/seo";
 const IndexPage = () => {
     return (
         <Layout>
-            
+            <h1> hello</h1>
+            <div className="h-[200vh]"></div>
         </Layout>
     );
 };
