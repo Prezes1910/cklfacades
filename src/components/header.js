@@ -51,10 +51,10 @@ const Header = () => {
                 >
                     <Link
                         to="/"
-                        className="flex lg:hidden  items-center justify-center"
+                        className="flex lg:hidden items-center justify-center"
                         aria-label="logo"
                     >
-                        <div className="h-auto w-12">
+                        <div className="h-auto w-12 ">
                             <StaticImage
                                 quality={100}
                                 className="h-full w-full"
@@ -100,7 +100,7 @@ const Header = () => {
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
                                 aria-label="Strona Główna"
-                                className="font-bold txtLogoColor transition-colors duration-200"
+                                className=" font-bold txtLogoColor transition-colors duration-200"
                                 to="/"
                             >
                                 Home
@@ -110,7 +110,7 @@ const Header = () => {
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
                                 aria-label="O Nas"
-                                className="font-bold txtLogoColor transition-colors duration-200"
+                                className=" font-bold txtLogoColor transition-colors duration-200"
                                 to="/oNas"
                             >
                                 About
@@ -118,7 +118,7 @@ const Header = () => {
                         </li>
                         <Link
                             to="/"
-                            className="hidden lg:flex h-auto w-16 mx-8 items-center justify-center"
+                            className="hidden hover:scale-105 transition-transform duration-300 lg:flex h-auto w-16 mx-8 items-center justify-center"
                             aria-label="logo"
                         >
                             <StaticImage
@@ -130,7 +130,7 @@ const Header = () => {
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
                                 aria-label="Oferta"
-                                className="font-bold txtLogoColor transition-colors duration-200"
+                                className=" font-bold txtLogoColor transition-colors duration-200"
                                 to="/oferta"
                             >
                                 Services
@@ -139,7 +139,7 @@ const Header = () => {
                         <li className="mx-2 my-2 px-2 py-2">
                             <Link
                                 aria-label="Kontakt"
-                                className="font-bold txtLogoColor transition-colors duration-200"
+                                className=" font-bold txtLogoColor transition-colors duration-200"
                                 to="/kontakt"
                             >
                                 Kontakt
