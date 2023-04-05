@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 const NotFoundPage = () => (
     <Layout>
-        <section className="h-[80vh] w-full flex flex-col items-center justify-center">
+        <section className="h-[60vh] w-full flex flex-col items-center justify-center">
             <h1
                 data-sal="slide-up"
                 data-sal-delay="0"
