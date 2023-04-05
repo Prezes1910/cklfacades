@@ -279,7 +279,7 @@ const Footer = () => (
             </div>
 
             <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">
-                © 2021 - Present Flowrift. All rights reserved.
+                © 2023 - Design @Seovileo.pl / All rights reserved.
             </div>
         </footer>
     </div>
