@@ -127,7 +127,7 @@ const Header = () => {
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/"
+                                to="/#about"
                             >
                                 About
                             </Link>
@@ -161,7 +161,7 @@ const Header = () => {
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/"
+                                to="/#services"
                             >
                                 Services
                             </Link>

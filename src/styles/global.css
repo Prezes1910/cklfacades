@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
 body {
     font-family: Rajdhani, sans-serif;
     background-color: #e9e9e9;
