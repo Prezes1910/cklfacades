@@ -11,16 +11,17 @@ module.exports = {
         siteUrl: `https://seovileo.pl/`,
     },
     plugins: [
+        "gatsby-plugin-slug",
         {
             resolve: `gatsby-source-datocms`,
             options: {
-              apiToken: `8e49b0a85e31a25874cd0ce5eb14f2`,
-              environment: `main`,
-              previewMode: false,
-              disableLiveReload: false,
-              pageSize: 500,
+                apiToken: `8e49b0a85e31a25874cd0ce5eb14f2`,
+                environment: `main`,
+                previewMode: false,
+                disableLiveReload: false,
+                pageSize: 500,
             },
-          },
+        },
         {
             resolve: `gatsby-omni-font-loader`,
             options: {
@@ -42,8 +43,8 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `assets`,
-                path: `${__dirname}/src/assets`,
+                name: `src`,
+                path: `${__dirname}/src`,
             },
         },
         `gatsby-transformer-sharp`,

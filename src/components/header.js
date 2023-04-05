@@ -8,6 +8,9 @@ const Header = () => {
     const HandleMenu = () => {
         setMenu(!showMenu);
     };
+    const falseMenu = () => {
+        setMenu(false);
+    };
 
     const [navbar, setNavbar] = useState(false);
 
@@ -107,6 +110,7 @@ const Header = () => {
                     >
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
+                                onClick={falseMenu}
                                 aria-label="Home"
                                 className={
                                     navbar
@@ -121,6 +125,7 @@ const Header = () => {
 
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
+                                onClick={falseMenu}
                                 aria-label="About Us"
                                 className={
                                     navbar
@@ -133,6 +138,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <Link
+                            onClick={falseMenu}
                             to="/"
                             className={
                                 navbar
@@ -147,14 +153,19 @@ const Header = () => {
                                 placeholder="blurred"
                                 src="../assets/logoBrowser.png"
                             />
-                            <p className={
+                            <p
+                                className={
                                     navbar
                                         ? "hidden transition-all duration-200"
                                         : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1"
-                                }>CKL Facades</p>
+                                }
+                            >
+                                CKL Facades
+                            </p>
                         </Link>
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
+                                onClick={falseMenu}
                                 aria-label="Services"
                                 className={
                                     navbar
@@ -168,6 +179,7 @@ const Header = () => {
                         </li>
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
+                                onClick={falseMenu}
                                 aria-label="Contakt"
                                 className={
                                     navbar
