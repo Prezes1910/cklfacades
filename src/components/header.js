@@ -199,11 +199,7 @@ const Header = () => {
                     </ul>
                     <button
                         onClick={HandleLanguage}
-                        className={
-                            changeLanguage
-                                ? "absolute flex items-center justify-center right-20  lg:right-12 p-3 bg-gray-800 rounded-full transition-colors duration-200"
-                                : "absolute flex items-center justify-center right-20 lg:right-12 p-3 hover:bg-gray-800 rounded-full transition-colors duration-200"
-                        }
+                        className={!navbar ? "absolute flex items-center justify-center right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100" : "absolute flex items-center justify-center right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100 -translate-y-[200%]"}
                     >
                         <StaticImage
                             height={20}
@@ -214,13 +210,13 @@ const Header = () => {
                         <div
                             className={
                                 changeLanguage
-                                    ? "absolute flex flex-col items-center justify-start rounded-lg text-gray-100 top-full bg-gray-800 py-3 scale-100 transition-transform duration-200"
-                                    : "absolute rounded-lg text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-200"
+                                    ? "absolute flex flex-col items-center justify-start rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-100 transition-transform duration-50"
+                                    : "absolute rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-50"
                             }
                         >
                             <Link
                                 to="/"
-                                className="flex items-center justify-start px-3 w-full hover:bg-gray-700"
+                                className="flex items-center justify-start px-6 w-full hover:bg-gray-700"
                             >
                                 <StaticImage
                                     height={12}
@@ -233,7 +229,7 @@ const Header = () => {
                             </Link>
                             <Link
                                 to="/pl"
-                                className="flex items-center justify-start px-3 w-full hover:bg-gray-700"
+                                className="flex items-center justify-start px-6 mt-3 w-full hover:bg-gray-700"
                             >
                                 <StaticImage
                                     height={12}

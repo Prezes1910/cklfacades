@@ -32,7 +32,7 @@ const IndexPage = () => {
                 </div>
 
 
-                <div className="text-gray-300 text-sm absolute left-2 flex flex-col items-center justify-center uppercase -my-3">
+                <div className="text-gray-300 hidden md:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3">
                     <p>L</p>
                     <p>I</p>
                     <p>N</p>

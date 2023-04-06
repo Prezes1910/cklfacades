@@ -27,11 +27,11 @@ const IndexPage = () => {
                         to="/"
                         className="mt-2 lg:mt-6 hover:bg-black transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
                     >
-                        Show More
+                        Zobacz Więcej
                     </Link>
                 </div>
 
-                <div className="text-gray-300 text-sm absolute left-2 flex flex-col items-center justify-center uppercase -my-3">
+                <div className="text-gray-300 hidden md:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3">
                     <p>L</p>
                     <p>I</p>
                     <p>N</p>
@@ -60,7 +60,7 @@ const IndexPage = () => {
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
-                            About Us
+                            O Nas
                         </h2>
 
                         <p className="max-w-screen-md text-gray-500 w-[70%] md:text-lg text-center mx-auto">
