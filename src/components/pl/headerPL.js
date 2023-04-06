@@ -66,7 +66,7 @@ const Header = () => {
                             <StaticImage
                                 quality={100}
                                 className="h-full w-full"
-                                src="../assets/logoBrowser.png"
+                                src="../../assets/logoBrowser.png"
                             />
                         </div>
                         <p
@@ -122,7 +122,7 @@ const Header = () => {
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/"
+                                to="/pl"
                             >
                                 Home
                             </Link>
@@ -137,14 +137,14 @@ const Header = () => {
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/#about"
+                                to="/pl/#about"
                             >
-                                About
+                                O Nas
                             </Link>
                         </li>
                         <Link
                             onClick={falseMenu}
-                            to="/"
+                            to="/pl"
                             className={
                                 navbar
                                     ? "flex-col hidden hover:scale-105 transition-all duration-300 lg:flex h-auto w-16 mx-8 items-center justify-center"
@@ -156,7 +156,7 @@ const Header = () => {
                                 quality={100}
                                 className="h-full w-full"
                                 placeholder="blurred"
-                                src="../assets/logoBrowser.png"
+                                src="../../assets/logoBrowser.png"
                             />
                             <p
                                 className={
@@ -177,9 +177,9 @@ const Header = () => {
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/#services"
+                                to="/pl/#services"
                             >
-                                Services
+                                Usługi
                             </Link>
                         </li>
                         <li className="mx-8 my-2 px-2 py-2">
@@ -191,9 +191,9 @@ const Header = () => {
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/"
+                                to="/pl"
                             >
-                                Contakt
+                                Kontakt
                             </Link>
                         </li>
                     </ul>
@@ -208,7 +208,7 @@ const Header = () => {
                         <StaticImage
                             height={20}
                             width={20}
-                            src="../assets/language/uk.png"
+                            src="../../assets/language/poland.png"
                         />
                         <div
                             className={
@@ -222,7 +222,7 @@ const Header = () => {
                                     height={12}
                                     width={12}
                                     layout="fixed"
-                                    src="../assets/language/uk.png"
+                                    src="../../assets/language/uk.png"
                                 />
                             <p className="ml-2">English</p>
                             </Link>
@@ -231,7 +231,7 @@ const Header = () => {
                                     height={12}
                                     width={12}
                                     layout="fixed"
-                                    src="../assets/language/poland.png"
+                                    src="../../assets/language/poland.png"
                                 />
                             <p className="ml-2">Polish</p>
                             </Link>

@@ -1,7 +1,7 @@
 // Logic exports
 import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Layout from "../../components/pl/layoutPL";
+import Seo from "../../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
@@ -13,15 +13,15 @@ const IndexPage = () => {
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
                         quality={100}
-                        src="../assets/hero.png"
+                        src="../../assets/hero.png"
                         placeholder="blurred"
                     />
                 </div>
 
                 <div className="absolute flex flex-col items-center justify-cente">
                     <h1 className="text-xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
-                        Technical and design services to the building envelope
-                        and facade industry
+                        Usługi techniczne i projektowe do przegród budowlanych i
+                        branży fasadowej
                     </h1>
                     <Link
                         to="/"
@@ -30,7 +30,6 @@ const IndexPage = () => {
                         Show More
                     </Link>
                 </div>
-
 
                 <div className="text-gray-300 text-sm absolute left-2 flex flex-col items-center justify-center uppercase -my-3">
                     <p>L</p>

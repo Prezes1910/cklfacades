@@ -13,11 +13,13 @@ body {
 }
 
 .btn{
-    border-radius: 7px;
-    box-shadow: #e9e9e9 2px 2px 22px;
+    padding: .75rem 1.75rem;
     background-color: #2d3d4b;
-    color: whitesmoke;
-    padding: 6px 18px;
+    color: white;
+    font-size: .875rem;
+    line-height: 1.375;
+    text-transform: uppercase;
+    border-radius: .25rem;
 }
 
 .linkColor{
