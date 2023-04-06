@@ -201,13 +201,14 @@ const Header = () => {
                         onClick={HandleLanguage}
                         className={
                             changeLanguage
-                                ? "absolute flex items-center justify-center right-24  lg:right-12 p-3 bg-gray-800 rounded-full transition-colors duration-200"
-                                : "absolute flex items-center justify-center right-24 lg:right-12 p-3 hover:bg-gray-800 rounded-full transition-colors duration-200"
+                                ? "absolute flex items-center justify-center right-20  lg:right-12 p-3 bg-gray-800 rounded-full transition-colors duration-200"
+                                : "absolute flex items-center justify-center right-20 lg:right-12 p-3 hover:bg-gray-800 rounded-full transition-colors duration-200"
                         }
                     >
                         <StaticImage
                             height={20}
                             width={20}
+                            placeholder="blurred"
                             src="../assets/language/uk.png"
                         />
                         <div
@@ -225,6 +226,7 @@ const Header = () => {
                                     height={12}
                                     width={12}
                                     layout="fixed"
+                                    placeholder="blurred"
                                     src="../assets/language/uk.png"
                                 />
                                 <p className="ml-2">English</p>
@@ -237,6 +239,7 @@ const Header = () => {
                                     height={12}
                                     width={12}
                                     layout="fixed"
+                                    placeholder="blurred"
                                     src="../assets/language/poland.png"
                                 />
                                 <p className="ml-2">Polish</p>
