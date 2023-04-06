@@ -201,8 +201,8 @@ const Header = () => {
                         onClick={HandleLanguage}
                         className={
                             changeLanguage
-                                ? "absolute flex items-center justify-center right-12 p-3 bg-gray-800 rounded-full transition-colors duration-200"
-                                : "absolute flex items-center justify-center right-12 p-3 hover:bg-gray-800 rounded-full transition-colors duration-200"
+                                ? "absolute flex items-center justify-center right-24  lg:right-12 p-3 bg-gray-800 rounded-full transition-colors duration-200"
+                                : "absolute flex items-center justify-center right-24 lg:right-12 p-3 hover:bg-gray-800 rounded-full transition-colors duration-200"
                         }
                     >
                         <StaticImage
@@ -217,23 +217,29 @@ const Header = () => {
                                     : "absolute rounded-lg text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-200"
                             }
                         >
-                            <Link to="/" className="flex items-center justify-start px-3 w-full hover:bg-gray-700">
+                            <Link
+                                to="/"
+                                className="flex items-center justify-start px-3 w-full hover:bg-gray-700"
+                            >
                                 <StaticImage
                                     height={12}
                                     width={12}
                                     layout="fixed"
                                     src="../assets/language/uk.png"
                                 />
-                            <p className="ml-2">English</p>
+                                <p className="ml-2">English</p>
                             </Link>
-                            <Link to="/pl" className="flex items-center justify-start px-3 w-full hover:bg-gray-700">
+                            <Link
+                                to="/pl"
+                                className="flex items-center justify-start px-3 w-full hover:bg-gray-700"
+                            >
                                 <StaticImage
                                     height={12}
                                     width={12}
                                     layout="fixed"
                                     src="../assets/language/poland.png"
                                 />
-                            <p className="ml-2">Polish</p>
+                                <p className="ml-2">Polish</p>
                             </Link>
                         </div>
                     </button>
