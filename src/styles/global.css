@@ -2,32 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
 }
 
 body {
     font-family: Rajdhani, sans-serif;
-    background-color: #e9e9e9;
+    background-color: #ececec;
 }
 
-.btn{
-    padding: .75rem 1.75rem;
-    background-color: #2d3d4b;
-    color: white;
-    font-size: .875rem;
-    line-height: 1.375;
-    text-transform: uppercase;
-    border-radius: .25rem;
+.btn {
+    @apply inline-block px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out;
 }
 
-.linkColor{
+.linkColor {
     color: #1d7cac;
 }
-.hoverLink:hover{
+.hoverLink:hover {
     color: #168585;
 }
-.bgLogoColor{
+.bgLogoColor {
     background-color: #2d3d4b;
 }
