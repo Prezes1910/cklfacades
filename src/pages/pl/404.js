@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/pl/headerPL";
 import Seo from "../../components/seo";
 import { Link } from "gatsby";
 

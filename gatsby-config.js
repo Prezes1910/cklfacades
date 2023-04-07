@@ -52,7 +52,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
+                name: `CKL-Facades`,
                 short_name: `starter`,
                 start_url: `/`,
                 background_color: `#0C0904`,

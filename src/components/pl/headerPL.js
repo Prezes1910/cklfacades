@@ -199,11 +199,7 @@ const Header = () => {
                     </ul>
                     <button
                         onClick={HandleLanguage}
-                        className={
-                            changeLanguage
-                                ? "absolute flex items-center justify-center right-20  lg:right-12 p-2 bg-gray-800 rounded-full transition-colors duration-200"
-                                : "absolute flex items-center justify-center right-20 lg:right-12 p-2 hover:bg-gray-800 rounded-full transition-colors duration-200"
-                        }
+                        className={!navbar ? "absolute flex items-center justify-center right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100" : "hidden"}
                     >
                         <StaticImage
                             height={20}
@@ -227,7 +223,7 @@ const Header = () => {
                                     width={12}
                                     layout="fixed"
                                     placeholder="blurred"
-                                    src="../assets/language/uk.png"
+                                    src="../../assets/language/uk.png"
                                 />
                                 <p className="ml-2">English</p>
                             </Link>
@@ -240,7 +236,7 @@ const Header = () => {
                                     width={12}
                                     layout="fixed"
                                     placeholder="blurred"
-                                    src="../assets/language/poland.png"
+                                    src="../../assets/language/poland.png"
                                 />
                                 <p className="ml-2">Polish</p>
                             </Link>

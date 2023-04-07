@@ -199,7 +199,7 @@ const Header = () => {
                     </ul>
                     <button
                         onClick={HandleLanguage}
-                        className={!navbar ? "absolute flex items-center justify-center right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100" : "absolute flex items-center justify-center right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100 -translate-y-[200%]"}
+                        className={!navbar ? "absolute flex items-center justify-center right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100" : "hidden"}
                     >
                         <StaticImage
                             height={20}

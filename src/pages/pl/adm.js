@@ -1,23 +1,23 @@
 import * as React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/pl/headerPL";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
-const Admin = () => (
+const Adminpl = () => (
     <Layout>
         <section className="relative flex items-center min-h-[16rem] justify-center w-full">
             <div className="w-full -mt-4 -z-20">
                 <StaticImage
                     className="h-full w-[220%] md:w-full"
                     quality={100}
-                    src="../assets/hero.png"
+                    src="../../assets/hero.png"
                     placeholder="blurred"
                 />
             </div>
             <p
                 className="absolute text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl capitalize text-white font-bold"
             >
-                administration panel:
+                Panel Administracyjny:
             </p>
         </section>
         <section className="mb-24 w-full flex flex-col items-center justify-center">
@@ -31,4 +31,4 @@ const Admin = () => (
     </Layout>
 );
 
-export default Admin;
+export default Adminpl;
