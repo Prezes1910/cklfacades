@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../../components/pl/headerPL";
+import Layout from "../../components/pl/layoutPL";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
