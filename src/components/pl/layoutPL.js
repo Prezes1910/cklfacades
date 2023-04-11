@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
     `);
 
     return (
-        <div className="text-base text-black max-w-[2000px] mx-auto">
+        <div className="text-base max-w-[2000px] mx-auto">
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
             <main className="w-full overflow-hidden">{children}</main>
 
