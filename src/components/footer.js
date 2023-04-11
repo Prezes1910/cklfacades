@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => (
-    <div class="bg-gray-900">
+    <div class="bg-gray-900 text-gray-400">
         <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div class="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
                 <div class="col-span-full lg:col-span-2">
@@ -25,7 +25,7 @@ const Footer = () => (
                         </Link>
                     </div>
 
-                    <p class="mb-6 text-gray-400 sm:pr-8">
+                    <p class="mb-6  sm:pr-8">
                         Filler text is dummy text which has no meaning however
                         looks very similar to real text.
                     </p>
@@ -34,7 +34,7 @@ const Footer = () => (
                         <Link
                             to="/"
                             target="_blank"
-                            class="text-gray-400 transition duration-100 hover:text-gray-500 "
+                            class=" transition duration-100 hover:text-gray-500 "
                         >
                             <svg
                                 class="h-5 w-5"
@@ -51,7 +51,7 @@ const Footer = () => (
                         <Link
                             to="/"
                             target="_blank"
-                            class="text-gray-400 transition duration-100 hover:text-gray-500 "
+                            class=" transition duration-100 hover:text-gray-500 "
                         >
                             <svg
                                 class="h-5 w-5"
@@ -68,7 +68,7 @@ const Footer = () => (
                         <Link
                             to="/"
                             target="_blank"
-                            class="text-gray-400 transition duration-100 hover:text-gray-500 "
+                            class=" transition duration-100 hover:text-gray-500 "
                         >
                             <svg
                                 class="h-5 w-5"
@@ -85,7 +85,7 @@ const Footer = () => (
                         <Link
                             to="/"
                             target="_blank"
-                            class="text-gray-400 transition duration-100 hover:text-gray-500 "
+                            class=" transition duration-100 hover:text-gray-500 "
                         >
                             <svg
                                 class="h-5 w-5"
@@ -110,7 +110,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Overview
                             </Link>
@@ -119,7 +119,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Solutions
                             </Link>
@@ -128,7 +128,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Pricing
                             </Link>
@@ -137,7 +137,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Customers
                             </Link>
@@ -154,7 +154,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 About
                             </Link>
@@ -163,7 +163,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Investor Relations
                             </Link>
@@ -172,7 +172,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Jobs
                             </Link>
@@ -181,7 +181,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Press
                             </Link>
@@ -198,7 +198,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Contact
                             </Link>
@@ -207,7 +207,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Chat
                             </Link>
@@ -216,7 +216,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 FAQ
                             </Link>
@@ -233,7 +233,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Terms of Service
                             </Link>
@@ -242,7 +242,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                class="text-gray-400 transition duration-100 hoverLink"
+                                class=" transition duration-100 hoverLink"
                             >
                                 Privacy Policy
                             </Link>
@@ -252,7 +252,7 @@ const Footer = () => (
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">
+            <div class="border-t border-gray-800 py-8 text-center text-sm ">
                 © 2023 - Design by <Link className="text-gray-300" to="https://seovileo.pl/">@Seovileo.pl</Link> / All rights reserved.
             </div>
         </footer>

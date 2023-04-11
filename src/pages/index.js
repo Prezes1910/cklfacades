@@ -104,7 +104,7 @@ const IndexPage = ({ data }) => {
                                     <h2 className="text-gray-800 w-[70%] text-xl font-bold">
                                         <Link
                                             to="/"
-                                            className="hoverLink  active:text-indigo-600 transition duration-100"
+                                            className="hoverLink  active:text-gray-900 transition duration-100"
                                         >
                                             {node.header}
                                         </Link>
@@ -125,6 +125,27 @@ const IndexPage = ({ data }) => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="lg:pt-16">
+                <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+                    <div className="rounded-lg bg-gray-100 shadow-xl px-4 py-6 md:py-8 lg:py-12">
+                        <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
+                            Introducing
+                        </p>
+
+                        <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+                            Revolutionary way to build the web
+                        </h2>
+
+                        <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
+                            This is a section of some simple filler text, also
+                            known as placeholder text. It shares some
+                            characteristics of a real written text but is random
+                            or otherwise generated.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -342,7 +363,7 @@ const IndexPage = ({ data }) => {
 
                                 <Link
                                     to="/"
-                                    className="block bg-indigo-200 bg-opacity-50 hover:bg-[#1d7cac] active:bg-[#168585] focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
+                                    className="block bg-indigo-200 bg-opacity-50 hover:bg-[#27b5b9] active:bg-[#168585] focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                                 >
                                     Get the {node.title}
                                 </Link>
@@ -352,14 +373,14 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <div className="max-w-screen-xl my-6 md:my-24 px-3 mx-auto">
+            <section className="max-w-screen-xl my-6 md:my-24 px-3 mx-auto">
                 <section className="mb-32 text-gray-800">
                     <div className="block rounded-lg shadow-lg bg-white">
                         {allDatoCmsArticle.edges.map(({ node }) => (
                             <div className="flex flex-wrap items-center">
                                 <div className="relative grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12">
                                     <GatsbyImage
-                                        className="lg:w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+                                        className="lg:w-full sm:max-h-[10rem] lg:max-h-[44rem] rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
@@ -486,7 +507,308 @@ const IndexPage = ({ data }) => {
                         ))}
                     </div>
                 </section>
-            </div>
+            </section>
+
+            <section className="bg-white py-6 sm:py-8 lg:py-12">
+                <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+                    <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+                        <div className="order-1">
+                            <div className="max-h-[35rem] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
+                                <StaticImage
+                                    src="https://images.unsplash.com/photo-1604092038795-ecd577310c83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                    loading="lazy"
+                                    quality={100}
+                                    alt="by unsplash"
+                                    className="h-full w-full object-cover object-center"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="md:pt-8 ">
+                            <p className="text-center font-bold text-[#168585] md:text-left">
+                                Who we are
+                            </p>
+
+                            <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-left">
+                                Our competitive advantage
+                            </h1>
+
+                            <p className="mb-6 text-gray-600 md:mb-8">
+                                This is a section of some simple filler text,
+                                also known as placeholder text. It shares some
+                                characteristics of a real written text but is
+                                random or otherwise generated. It may be used to
+                                display a sample of fonts or generate text for
+                                testing. Filler text is dummy text which has no
+                                meaning however looks very similar to real text.
+                                <br />
+                                <br />
+                                This is a section of some simple filler text,
+                                also known as placeholder text. It shares some
+                                characteristics of a real written text but is{" "}
+                                <a
+                                    href="#"
+                                    className="text-[#168585] underline transition duration-100 hover:text-gray-900 active:text-gray-900"
+                                >
+                                    random
+                                </a>{" "}
+                                or otherwise generated. It may be used to
+                                display a sample of fonts or generate text for
+                                testing. Filler text is dummy text which has no
+                                meaning however looks very similar to real text.
+                            </p>
+
+                            <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
+                                About us
+                            </h2>
+
+                            <p className="mb-6 text-gray-600 md:mb-8">
+                                This is a section of some simple filler text,
+                                also known as placeholder text. It shares some
+                                characteristics of a real written text but is
+                                random or otherwise generated. It may be used to
+                                display a sample of fonts or generate text for
+                                testing. Filler text is dummy text which has no
+                                meaning however looks very similar to real text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="text-gray-600 body-font">
+                <div className="container px-5 py-24 mx-auto">
+                    <div className="text-center mb-20">
+                        <h1 className="sm:text-3xl text-2xl font-bold text-center title-font text-gray-900 mb-4">
+                            Raw Denim Heirloom Man Braid
+                        </h1>
+                        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+                            Blue bottle crucifix vinyl post-ironic four dollar
+                            toast vegan taxidermy. Gastropub indxgo juice
+                            poutine, ramps microdosing banh mi pug.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                        <div className="p-2 sm:w-1/2 w-full">
+                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="3"
+                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span className="title-font font-medium">
+                                    Authentic Cliche Forage
+                                </span>
+                            </div>
+                        </div>
+                        <div className="p-2 sm:w-1/2 w-full">
+                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="3"
+                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span className="title-font font-medium">
+                                    Kinfolk Chips Snackwave
+                                </span>
+                            </div>
+                        </div>
+                        <div className="p-2 sm:w-1/2 w-full">
+                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="3"
+                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span className="title-font font-medium">
+                                    Coloring Book Ethical
+                                </span>
+                            </div>
+                        </div>
+                        <div className="p-2 sm:w-1/2 w-full">
+                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="3"
+                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span className="title-font font-medium">
+                                    Typewriter Polaroid Cray
+                                </span>
+                            </div>
+                        </div>
+                        <div className="p-2 sm:w-1/2 w-full">
+                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="3"
+                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span className="title-font font-medium">
+                                    Pack Truffaut Blue
+                                </span>
+                            </div>
+                        </div>
+                        <div className="p-2 sm:w-1/2 w-full">
+                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="3"
+                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                                <span className="title-font font-medium">
+                                    The Catcher In The Rye
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <button className=" btn mt-16 mx-2">Button</button>
+                        <button className=" btn mt-16 mx-2">Button</button>
+                    </div>
+                </div>
+            </section>
+
+            <section className="text-gray-600 body-font relative bg-white">
+                <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+                    <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            className="absolute inset-0"
+                            frameborder="0"
+                            title="map"
+                            marginheight="0"
+                            marginwidth="0"
+                            scrolling="no"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.803116818!2d21.061194099999998!3d52.23293795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1681215426441!5m2!1spl!2spl"
+                            style={{filter: "grayscale(1) contrast(1.2) opacity(0.6)"}}
+                        ></iframe>
+                        <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+                            <div className="lg:w-1/2 px-6">
+                                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                                    ADDRESS
+                                </h2>
+                                <p className="mt-1">
+                                    Photo booth tattooed prism, portland taiyaki
+                                    hoodie neutra typewriter
+                                </p>
+                            </div>
+                            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                                    EMAIL
+                                </h2>
+                                <p className="text-[#168585] leading-relaxed">
+                                    example@email.com
+                                </p>
+                                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
+                                    PHONE
+                                </h2>
+                                <p className="leading-relaxed">123-456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-2xl">
+                        <h2 className="text-[#168585] font-bold text-lg mb-1 title-font">
+                            Feedback
+                        </h2>
+                        <p className="leading-relaxed mb-5 text-gray-600">
+                            Post-ironic portland shabby chic echo park, banjo
+                            fashion axe
+                        </p>
+                        <div className="relative mb-4">
+                            <label
+                                for="name"
+                                className="leading-7 text-sm text-gray-600"
+                            >
+                                Name
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                className="w-full bg-white rounded border border-gray-300 focus:border-gray-700 focus:ring-2 focus:ring-[#168585] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            />
+                        </div>
+                        <div className="relative mb-4">
+                            <label
+                                for="email"
+                                className="leading-7 text-sm text-gray-600"
+                            >
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                className="w-full bg-white rounded border border-gray-300 focus:border-gray-700 focus:ring-2 focus:ring-[#168585] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            />
+                        </div>
+                        <div className="relative mb-4">
+                            <label
+                                for="message"
+                                className="leading-7 text-sm text-gray-600"
+                            >
+                                Message
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                className="w-full bg-white rounded border border-gray-300 focus:border-gray-700 focus:ring-2 focus:ring-[#168585] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                            ></textarea>
+                        </div>
+                        <button className="btn border-0 py-2 px-6 focus:outline-none  rounded text-lg">
+                            Send Message
+                        </button>
+                        <p className="text-xs text-gray-500 mt-3">
+                            Chicharrones blog helvetica normcore iceland tousled
+                            brook viral artisan.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };
