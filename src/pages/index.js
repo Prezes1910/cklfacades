@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section id="about" className="scroll-m-10 mt-10">
+            <section id="about" className="scroll-m-10 mt-10 mb-16">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -129,7 +129,74 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section className="lg:pt-16">
+            <section className="bg-white py-6 sm:py-8 lg:py-12">
+                <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+                    <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+                        <div className="order-1">
+                            <div className="max-h-[35rem] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
+                                <StaticImage
+                                    src="https://images.unsplash.com/photo-1604092038795-ecd577310c83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                    loading="lazy"
+                                    quality={100}
+                                    alt="by unsplash"
+                                    className="h-full w-full object-cover object-center"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="md:pt-8 ">
+                            <p className="text-center font-bold text-[#168585] md:text-left">
+                                Who we are
+                            </p>
+
+                            <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-left">
+                                Our competitive advantage
+                            </h1>
+
+                            <p className="mb-6 text-gray-600 md:mb-8">
+                                This is a section of some simple filler text,
+                                also known as placeholder text. It shares some
+                                characteristics of a real written text but is
+                                random or otherwise generated. It may be used to
+                                display a sample of fonts or generate text for
+                                testing. Filler text is dummy text which has no
+                                meaning however looks very similar to real text.
+                                <br />
+                                <br />
+                                This is a section of some simple filler text,
+                                also known as placeholder text. It shares some
+                                characteristics of a real written text but is{" "}
+                                <a
+                                    href="#"
+                                    className="text-[#168585] underline transition duration-100 hover:text-gray-900 active:text-gray-900"
+                                >
+                                    random
+                                </a>{" "}
+                                or otherwise generated. It may be used to
+                                display a sample of fonts or generate text for
+                                testing. Filler text is dummy text which has no
+                                meaning however looks very similar to real text.
+                            </p>
+
+                            <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
+                                About us
+                            </h2>
+
+                            <p className="mb-6 text-gray-600 md:mb-8">
+                                This is a section of some simple filler text,
+                                also known as placeholder text. It shares some
+                                characteristics of a real written text but is
+                                random or otherwise generated. It may be used to
+                                display a sample of fonts or generate text for
+                                testing. Filler text is dummy text which has no
+                                meaning however looks very similar to real text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="pt-6 lg:pt-16">
                 <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
                     <div className="rounded-lg bg-gray-100 shadow-xl px-4 py-6 md:py-8 lg:py-12">
                         <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
@@ -146,9 +213,253 @@ const IndexPage = ({ data }) => {
                             characteristics of a real written text but is random
                             or otherwise generated.
                         </p>
+                            <div class="hidden w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
+                                <div class="mx-auto flex max-w-screen-lg items-center gap-8 p-8">
+                                    <div class="grid w-2/3 grid-cols-2 gap-8">
+                                        <div href="#" class="group flex gap-4">
+                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div class="mb-1 font-semibold">
+                                                    Growth
+                                                </div>
+                                                <p class="text-sm text-gray-500">
+                                                    This is a section of some
+                                                    simple filler text, also
+                                                    known as placeholder text.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div href="#" class="group flex gap-4">
+                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div class="mb-1 font-semibold">
+                                                    Security
+                                                </div>
+                                                <p class="text-sm text-gray-500">
+                                                    This is a section of some
+                                                    simple filler text, also
+                                                    known as placeholder text.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div href="#" class="group flex gap-4">
+                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div class="mb-1 font-semibold">
+                                                    Cloud
+                                                </div>
+                                                <p class="text-sm text-gray-500">
+                                                    This is a section of some
+                                                    simple filler text, also
+                                                    known as placeholder text.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div href="#" class="group flex gap-4">
+                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 w-5"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div class="mb-1 font-semibold">
+                                                    Analytics
+                                                </div>
+                                                <p class="text-sm text-gray-500">
+                                                    This is a section of some
+                                                    simple filler text, also
+                                                    known as placeholder text.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-1/3 overflow-hidden rounded-lg border">
+                                        <div class="h-48 bg-gray-100">
+                                            <img
+                                                src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
+                                                loading="lazy"
+                                                alt="Photo by Fakurian Design"
+                                                class="h-full w-full object-cover object-center"
+                                            />
+                                        </div>
+
+                                        <div class="flex items-center justify-between gap-2 bg-white p-3">
+                                            <p class="text-sm text-gray-500">
+                                                This is some simple filler text.
+                                            </p>
+
+                                            <Link
+                                                to="/"
+                                                class="inline-block shrink-0 rounded-lg border bg-white px-3 py-1 text-sm font-semibold text-[#168585] outline-none ring-[#168585] transition duration-100 hover:bg-gray-50 focus-visible:ring active:bg-gray-100"
+                                            >
+                                                More
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
                     </div>
                 </div>
             </section>
+
+
+
+<div class="container my-24 px-6 mx-auto">
+
+
+  <section class="mb-32 text-gray-800 text-center lg:text-left">
+
+    <h2 class="text-3xl font-bold mb-12 text-center">Projects we are proud of</h2>
+
+    <div class="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
+      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0" data-mdb-ripple="true"
+        data-mdb-ripple-color="light">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover">
+          <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="w-full rounded-t-lg" />
+          <a href="#!">
+            <div
+              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+              ></div>
+          </a>
+          <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
+            <path fill="#fff"
+              d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Nostalgic waves</h5>
+          <p class="mb-4 pb-2">
+            Ut pretium ultricies dignissim. Sed sit amet mi eget urna
+            placerat vulputate. Ut vulputate est non quam dignissim
+            elementum. Donec a ullamcorper diam.
+          </p>
+          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn
+            more</a>
+        </div>
+      </div>
+
+      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
+          data-mdb-ripple-color="light">
+          <img src="https://mdbootstrap.com/img/new/standard/nature/114.jpg" class="w-full rounded-t-lg" />
+          <a href="#!">
+            <div
+              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+              ></div>
+          </a>
+          <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
+            <path fill="#fff"
+              d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Winter wildlife</h5>
+          <p class="mb-4 pb-2">
+            Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet diam orci, nec ornare metus semper sed. Integer
+            volutpat ornare erat sit amet rutrum.
+          </p>
+          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn
+            more</a>
+        </div>
+      </div>
+
+      <div class="bg-white block rounded-lg shadow-lg">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
+          data-mdb-ripple-color="light">
+          <img src="https://mdbootstrap.com/img/new/standard/nature/117.jpg" class="w-full rounded-t-lg" />
+          <a href="#!">
+            <div
+              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+              ></div>
+          </a>
+          <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
+            <path fill="#fff"
+              d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Camping travel</h5>
+          <p class="mb-4 pb-2">
+            Curabitur tristique, mi a mollis sagittis, metus felis mattis arcu, non vehicula nisl dui quis diam.
+            Mauris ut risus eget massa volutpat feugiat.
+          </p>
+          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn
+            more</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+
+
 
             <section
                 id="services"
@@ -509,73 +820,6 @@ const IndexPage = ({ data }) => {
                 </section>
             </section>
 
-            <section className="bg-white py-6 sm:py-8 lg:py-12">
-                <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
-                        <div className="order-1">
-                            <div className="max-h-[35rem] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-                                <StaticImage
-                                    src="https://images.unsplash.com/photo-1604092038795-ecd577310c83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                                    loading="lazy"
-                                    quality={100}
-                                    alt="by unsplash"
-                                    className="h-full w-full object-cover object-center"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="md:pt-8 ">
-                            <p className="text-center font-bold text-[#168585] md:text-left">
-                                Who we are
-                            </p>
-
-                            <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-left">
-                                Our competitive advantage
-                            </h1>
-
-                            <p className="mb-6 text-gray-600 md:mb-8">
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
-                                <br />
-                                <br />
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is{" "}
-                                <a
-                                    href="#"
-                                    className="text-[#168585] underline transition duration-100 hover:text-gray-900 active:text-gray-900"
-                                >
-                                    random
-                                </a>{" "}
-                                or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
-                            </p>
-
-                            <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
-                                About us
-                            </h2>
-
-                            <p className="mb-6 text-gray-600 md:mb-8">
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="text-center mb-20">
@@ -724,7 +968,9 @@ const IndexPage = ({ data }) => {
                             marginwidth="0"
                             scrolling="no"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.803116818!2d21.061194099999998!3d52.23293795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1681215426441!5m2!1spl!2spl"
-                            style={{filter: "grayscale(1) contrast(1.2) opacity(0.6)"}}
+                            style={{
+                                filter: "grayscale(1) contrast(1.2) opacity(0.6)",
+                            }}
                         ></iframe>
                         <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
                             <div className="lg:w-1/2 px-6">
