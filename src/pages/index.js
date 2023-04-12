@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section id="about" className="scroll-m-16 mt-10 mb-16">
+            <section id="about" className="scroll-m-16 mt-10 mb-6 md:mb-16">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -198,7 +198,7 @@ const IndexPage = ({ data }) => {
 
             <section className="pt-6 lg:pt-16">
                 <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-                    <div className="rounded-lg bg-gray-100 shadow-xl px-4 py-6 md:py-8 lg:py-12">
+                    <div className="rounded-lg bg-gray-100 shadow-lg px-4 py-6 md:py-8 lg:py-12">
                         <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
                             Introducing
                         </p>
@@ -360,10 +360,10 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section className="container my-24 px-6 lg:px-12 mx-auto">
-                <div className="mb-32 text-gray-800 text-center lg:text-left">
+            <section className="container mt-12 px-6 lg:px-12 mx-auto">
+                <div className="lg:mb-20 text-gray-800 text-center lg:text-left">
                     <h2 className="text-3xl font-bold mb-12 text-center">
-                        Projects we are proud of
+                        Projects we are proud of Xyz
                     </h2>
 
                     <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
@@ -884,7 +884,7 @@ const IndexPage = ({ data }) => {
 
             <section className="text-gray-600 body-font">
                 <div className="container py-6 md:py-12 px-5 pt-10 mx-auto">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-6 lg:mb-20">
                         <h1 className="sm:text-3xl text-2xl font-bold text-center title-font text-gray-900 mb-4">
                             Raw Denim Heirloom Man Braid
                         </h1>
@@ -1010,9 +1010,9 @@ const IndexPage = ({ data }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center">
-                        <button className=" btn mt-16 mx-2">Button</button>
-                        <button className=" btn mt-16 mx-2">Button</button>
+                    <div className="flex items-center justify-center mt-8 mb-6">
+                        <button className=" btn mx-2">Button</button>
+                        <button className=" btn mx-2">Button</button>
                     </div>
                 </div>
             </section>

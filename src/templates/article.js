@@ -64,7 +64,7 @@ const ArticleTemplate = ({
                 </section>
             </section>
 
-            <section className="mt-10 mb-16 max-w-screen-xl mx-auto">
+            <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                     {allDatoCmsAboutArticle.edges.map(({ node }) => (
                         <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
