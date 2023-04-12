@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => {
                         {allDatoCmsAboutArticle.edges.map(({ node }) => (
                             <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
                                 <Link
-                                    to="/"
+                                    to={node.slug}
                                     className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
                                 >
                                     <GatsbyImage
@@ -116,7 +116,7 @@ const IndexPage = ({ data }) => {
 
                                     <div>
                                         <Link
-                                            to="/"
+                                            to={node.slug}
                                             className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
                                         >
                                             Read more
@@ -1140,83 +1140,84 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-    query MyQuery {
-        allDatoCmsHeroTitle {
-            edges {
-                node {
-                    heroTitle
-                }
-            }
-        }
-        allDatoCmsAbout {
-            edges {
-                node {
-                    aboutUs
-                }
-            }
-        }
-        allDatoCmsAboutArticle {
-            edges {
-                node {
-                    img {
-                        alt
-                        gatsbyImageData
-                    }
-                    header
-                    description
-                    date
-                }
-            }
-        }
-        allDatoCmsChooseAPlan {
-            edges {
-                node {
-                    chooseAPlan
-                }
-            }
-        }
-        allDatoCmsPlanCard {
-            edges {
-                node {
-                    pointc1
-                    pointc2
-                    pointc3
-                    pointx1
-                    pointx2
-                    pointx3
-                    pointx4
-                    pointx5
-                    price
-                    price2
-                    priceDeleted
-                    priceDeleted2
-                    promo
-                    title
-                    title2
-                    smallHeader
-                    smallHeader2
-                }
-            }
-        }
-        allDatoCmsArticle {
-            edges {
-                node {
-                    description
-                    header
-                    img {
-                        alt
-                        gatsbyImageData
-                    }
-                    pointx1
-                    pointx2
-                    pointx3
-                    pointx4
-                    pointx5
-                    pointx6
-                }
+query MyQuery {
+    allDatoCmsHeroTitle {
+        edges {
+            node {
+                heroTitle
             }
         }
     }
+    allDatoCmsAbout {
+        edges {
+            node {
+                aboutUs
+            }
+        }
+    }
+    allDatoCmsAboutArticle {
+        edges {
+            node {
+              slug
+                img {
+                    alt
+                    gatsbyImageData
+                }
+                header
+                description
+                date
+            }
+        }
+    }
+    allDatoCmsChooseAPlan {
+        edges {
+            node {
+                chooseAPlan
+            }
+        }
+    }
+    allDatoCmsPlanCard {
+        edges {
+            node {
+                pointc1
+                pointc2
+                pointc3
+                pointx1
+                pointx2
+                pointx3
+                pointx4
+                pointx5
+                price
+                price2
+                priceDeleted
+                priceDeleted2
+                promo
+                title
+                title2
+                smallHeader
+                smallHeader2
+            }
+        }
+    }
+    allDatoCmsArticle {
+        edges {
+            node {
+                description
+                header
+                img {
+                    alt
+                    gatsbyImageData
+                }
+                pointx1
+                pointx2
+                pointx3
+                pointx4
+                pointx5
+                pointx6
+            }
+        }
+    }
+}
 `;
 
 export const Head = () => <Seo title="CKL Facades" />;
