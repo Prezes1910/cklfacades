@@ -11,7 +11,10 @@ module.exports = {
         siteUrl: `https://seovileo.pl/`,
     },
     plugins: [
-        "gatsby-plugin-slug",
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {},
+        },
         {
             resolve: `gatsby-source-datocms`,
             options: {
@@ -43,10 +46,10 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `src`,
-                path: `${__dirname}/src`,
+              name: `content`,
+              path: `${__dirname}/src/content`,
             },
-        },
+          },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {

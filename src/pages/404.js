@@ -11,7 +11,7 @@ const NotFoundPage = () => (
                 <StaticImage
                     className=" object-bottom w-[220%] md:w-full"
                     quality={100}
-                    src="../../assets/hero.png"
+                    src="../assets/hero.png"
                     placeholder="blurred"
                 />
             </div>

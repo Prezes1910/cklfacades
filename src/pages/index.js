@@ -47,8 +47,8 @@ const IndexPage = ({ data }) => {
                         )
                     )}
                     <div className="h-8 w-[2px] my-4 bg-gray-600 rounded-3xl" />
-                    <a
-                        href="https://www.linkedin.com/company/ckl-facades/?fbclid=IwAR2BI5yn7XTImJnXJ9Pl0OmsGPAA8fFKzTba0CPcDrkQxkUtcQJtEX_CIMQ"
+                    <Link
+                        to="https://www.linkedin.com/company/ckl-facades/?fbclid=IwAR2BI5yn7XTImJnXJ9Pl0OmsGPAA8fFKzTba0CPcDrkQxkUtcQJtEX_CIMQ"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
                         >
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </section>
 
@@ -166,12 +166,12 @@ const IndexPage = ({ data }) => {
                                 This is a section of some simple filler text,
                                 also known as placeholder text. It shares some
                                 characteristics of a real written text but is{" "}
-                                <a
-                                    href="#"
+                                <Link
+                                    to="/"
                                     className="text-[#168585] underline transition duration-100 hover:text-gray-900 active:text-gray-900"
                                 >
                                     random
-                                </a>{" "}
+                                </Link>{" "}
                                 or otherwise generated. It may be used to
                                 display a sample of fonts or generate text for
                                 testing. Filler text is dummy text which has no
@@ -213,253 +213,300 @@ const IndexPage = ({ data }) => {
                             characteristics of a real written text but is random
                             or otherwise generated.
                         </p>
-                            <div class="hidden w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
-                                <div class="mx-auto flex max-w-screen-lg items-center gap-8 p-8">
-                                    <div class="grid w-2/3 grid-cols-2 gap-8">
-                                        <div href="#" class="group flex gap-4">
-                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-6 w-6"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                                                    />
-                                                </svg>
-                                            </div>
-
-                                            <div>
-                                                <div class="mb-1 font-semibold">
-                                                    Growth
-                                                </div>
-                                                <p class="text-sm text-gray-500">
-                                                    This is a section of some
-                                                    simple filler text, also
-                                                    known as placeholder text.
-                                                </p>
-                                            </div>
+                        <div className="hidden w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
+                            <div className="mx-auto flex max-w-screen-lg items-center gap-8 p-8">
+                                <div className="grid w-2/3 grid-cols-2 gap-8">
+                                    <div className="group flex gap-4">
+                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-6 w-6"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                                                />
+                                            </svg>
                                         </div>
 
-                                        <div href="#" class="group flex gap-4">
-                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-6 w-6"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                                                    />
-                                                </svg>
+                                        <div>
+                                            <div className="mb-1 font-semibold">
+                                                Growth
                                             </div>
-
-                                            <div>
-                                                <div class="mb-1 font-semibold">
-                                                    Security
-                                                </div>
-                                                <p class="text-sm text-gray-500">
-                                                    This is a section of some
-                                                    simple filler text, also
-                                                    known as placeholder text.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div href="#" class="group flex gap-4">
-                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-6 w-6"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                                                    />
-                                                </svg>
-                                            </div>
-
-                                            <div>
-                                                <div class="mb-1 font-semibold">
-                                                    Cloud
-                                                </div>
-                                                <p class="text-sm text-gray-500">
-                                                    This is a section of some
-                                                    simple filler text, also
-                                                    known as placeholder text.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div href="#" class="group flex gap-4">
-                                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-5 w-5"
-                                                    viewBox="0 0 20 20"
-                                                    fill="currentColor"
-                                                >
-                                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-                                                </svg>
-                                            </div>
-
-                                            <div>
-                                                <div class="mb-1 font-semibold">
-                                                    Analytics
-                                                </div>
-                                                <p class="text-sm text-gray-500">
-                                                    This is a section of some
-                                                    simple filler text, also
-                                                    known as placeholder text.
-                                                </p>
-                                            </div>
+                                            <p className="text-sm text-gray-500">
+                                                This is a section of some simple
+                                                filler text, also known as
+                                                placeholder text.
+                                            </p>
                                         </div>
                                     </div>
 
-                                    <div class="w-1/3 overflow-hidden rounded-lg border">
-                                        <div class="h-48 bg-gray-100">
-                                            <img
-                                                src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
-                                                loading="lazy"
-                                                alt="Photo by Fakurian Design"
-                                                class="h-full w-full object-cover object-center"
-                                            />
+                                    <div className="group flex gap-4">
+                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-6 w-6"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                                />
+                                            </svg>
                                         </div>
 
-                                        <div class="flex items-center justify-between gap-2 bg-white p-3">
-                                            <p class="text-sm text-gray-500">
-                                                This is some simple filler text.
+                                        <div>
+                                            <div className="mb-1 font-semibold">
+                                                Security
+                                            </div>
+                                            <p className="text-sm text-gray-500">
+                                                This is a section of some simple
+                                                filler text, also known as
+                                                placeholder text.
                                             </p>
+                                        </div>
+                                    </div>
 
-                                            <Link
-                                                to="/"
-                                                class="inline-block shrink-0 rounded-lg border bg-white px-3 py-1 text-sm font-semibold text-[#168585] outline-none ring-[#168585] transition duration-100 hover:bg-gray-50 focus-visible:ring active:bg-gray-100"
+                                    <div className="group flex gap-4">
+                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-6 w-6"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
                                             >
-                                                More
-                                            </Link>
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                                                />
+                                            </svg>
+                                        </div>
+
+                                        <div>
+                                            <div className="mb-1 font-semibold">
+                                                Cloud
+                                            </div>
+                                            <p className="text-sm text-gray-500">
+                                                This is a section of some simple
+                                                filler text, also known as
+                                                placeholder text.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="group flex gap-4">
+                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-5 w-5"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                            >
+                                                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                            </svg>
+                                        </div>
+
+                                        <div>
+                                            <div className="mb-1 font-semibold">
+                                                Analytics
+                                            </div>
+                                            <p className="text-sm text-gray-500">
+                                                This is a section of some simple
+                                                filler text, also known as
+                                                placeholder text.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div className="w-1/3 overflow-hidden rounded-lg border">
+                                    <div className="h-48 bg-gray-100">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
+                                            loading="lazy"
+                                            alt="seovileo"
+                                            className="h-full w-full object-cover object-center"
+                                        />
+                                    </div>
+
+                                    <div className="flex items-center justify-between gap-2 bg-white p-3">
+                                        <p className="text-sm text-gray-500">
+                                            This is some simple filler text.
+                                        </p>
+
+                                        <Link
+                                            to="/"
+                                            className="inline-block shrink-0 rounded-lg border bg-white px-3 py-1 text-sm font-semibold text-[#168585] outline-none ring-[#168585] transition duration-100 hover:bg-gray-50 focus-visible:ring active:bg-gray-100"
+                                        >
+                                            More
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
-                        
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <section className="container my-24 px-6 lg:px-12 mx-auto">
+                <div className="mb-32 text-gray-800 text-center lg:text-left">
+                    <h2 className="text-3xl font-bold mb-12 text-center">
+                        Projects we are proud of
+                    </h2>
 
+                    <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
+                        <div
+                            className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0"
+                            data-mdb-ripple="true"
+                            data-mdb-ripple-color="light"
+                        >
+                            <div className="relative overflow-hidden bg-no-repeat bg-cover">
+                                <StaticImage
+                                    alt="bla bla"
+                                    src="https://images.unsplash.com/photo-1530512878321-60525c2283bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+                                    className="w-full rounded-t-lg h-52"
+                                />
+                                <Link to="/">
+                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
+                                </Link>
+                                <svg
+                                    className="absolute"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 1440 320"
+                                >
+                                    <path
+                                        fill="#fff"
+                                        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div className="p-6">
+                                <h5 className="font-bold text-lg mb-3">
+                                    Nostalgic waves
+                                </h5>
+                                <p className="mb-4 pb-2">
+                                    Ut pretium ultricies dignissim. Sed sit amet
+                                    mi eget urna placerat vulputate. Ut
+                                    vulputate est non quam dignissim elementum.
+                                    Donec a ullamcorper diam.
+                                </p>
+                                <Link
+                                    to="/"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="light"
+                                    className="btn"
+                                >
+                                    Learn more
+                                </Link>
+                            </div>
+                        </div>
 
-<div class="container my-24 px-6 mx-auto">
+                        <div className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
+                            <div
+                                className="relative overflow-hidden bg-no-repeat bg-cover"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="light"
+                            >
+                                <StaticImage
+                                    alt="blabla"
+                                    src="https://images.unsplash.com/photo-1533841158507-cf3a93f3cd74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                                    className="w-full rounded-t-lg h-52"
+                                />
+                                <Link to="/">
+                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
+                                </Link>
+                                <svg
+                                    className="absolute"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 1440 320"
+                                >
+                                    <path
+                                        fill="#fff"
+                                        d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div className="p-6">
+                                <h5 className="font-bold text-lg mb-3">
+                                    Winter wildlife
+                                </h5>
+                                <p className="mb-4 pb-2">
+                                    Suspendisse in volutpat massa. Nulla
+                                    facilisi. Sed aliquet diam orci, nec ornare
+                                    metus semper sed. Integer volutpat ornare
+                                    erat sit amet rutrum.
+                                </p>
+                                <Link
+                                    to="/"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="light"
+                                    className="btn"
+                                >
+                                    Learn more
+                                </Link>
+                            </div>
+                        </div>
 
-
-  <section class="mb-32 text-gray-800 text-center lg:text-left">
-
-    <h2 class="text-3xl font-bold mb-12 text-center">Projects we are proud of</h2>
-
-    <div class="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
-      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0" data-mdb-ripple="true"
-        data-mdb-ripple-color="light">
-        <div class="relative overflow-hidden bg-no-repeat bg-cover">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="w-full rounded-t-lg" />
-          <a href="#!">
-            <div
-              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-              ></div>
-          </a>
-          <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-            <path fill="#fff"
-              d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-          </svg>
-        </div>
-        <div class="p-6">
-          <h5 class="font-bold text-lg mb-3">Nostalgic waves</h5>
-          <p class="mb-4 pb-2">
-            Ut pretium ultricies dignissim. Sed sit amet mi eget urna
-            placerat vulputate. Ut vulputate est non quam dignissim
-            elementum. Donec a ullamcorper diam.
-          </p>
-          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
-            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn
-            more</a>
-        </div>
-      </div>
-
-      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
-        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
-          data-mdb-ripple-color="light">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/114.jpg" class="w-full rounded-t-lg" />
-          <a href="#!">
-            <div
-              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-              ></div>
-          </a>
-          <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-            <path fill="#fff"
-              d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-          </svg>
-        </div>
-        <div class="p-6">
-          <h5 class="font-bold text-lg mb-3">Winter wildlife</h5>
-          <p class="mb-4 pb-2">
-            Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet diam orci, nec ornare metus semper sed. Integer
-            volutpat ornare erat sit amet rutrum.
-          </p>
-          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
-            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn
-            more</a>
-        </div>
-      </div>
-
-      <div class="bg-white block rounded-lg shadow-lg">
-        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
-          data-mdb-ripple-color="light">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/117.jpg" class="w-full rounded-t-lg" />
-          <a href="#!">
-            <div
-              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-              ></div>
-          </a>
-          <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-            <path fill="#fff"
-              d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-          </svg>
-        </div>
-        <div class="p-6">
-          <h5 class="font-bold text-lg mb-3">Camping travel</h5>
-          <p class="mb-4 pb-2">
-            Curabitur tristique, mi a mollis sagittis, metus felis mattis arcu, non vehicula nisl dui quis diam.
-            Mauris ut risus eget massa volutpat feugiat.
-          </p>
-          <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
-            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Learn
-            more</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-</div>
-
-
-
+                        <div className="bg-white block rounded-lg shadow-lg">
+                            <div
+                                className="relative overflow-hidden bg-no-repeat bg-cover"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="light"
+                            >
+                                <StaticImage
+                                    alt="blablaaa"
+                                    src="https://images.unsplash.com/photo-1523121297868-a27703f88158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                                    className="w-full rounded-t-lg h-52"
+                                />
+                                <Link to="/">
+                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
+                                </Link>
+                                <svg
+                                    className="absolute"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 1440 320"
+                                >
+                                    <path
+                                        fill="#fff"
+                                        d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div className="p-6">
+                                <h5 className="font-bold text-lg mb-3">
+                                    Camping travel
+                                </h5>
+                                <p className="mb-4 pb-2">
+                                    Curabitur tristique, mi a mollis sagittis,
+                                    metus felis mattis arcu, non vehicula nisl
+                                    dui quis diam. Mauris ut risus eget massa
+                                    volutpat feugiat.
+                                </p>
+                                <Link
+                                    to="/"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="light"
+                                    className="btn"
+                                >
+                                    Learn more
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section
                 id="services"
@@ -685,7 +732,7 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section className="max-w-screen-xl my-6 md:my-24 px-3 mx-auto">
-                <section className="mb-32 text-gray-800">
+                <section className="text-gray-800">
                     <div className="block rounded-lg shadow-lg bg-white">
                         {allDatoCmsArticle.edges.map(({ node }) => (
                             <div className="flex flex-wrap items-center">
@@ -820,8 +867,23 @@ const IndexPage = ({ data }) => {
                 </section>
             </section>
 
+            <section className="relative h-96 overflow-hidden max-w-[2000px] flex flex-col items-center justify-center">
+                <div className="absolute w-full h-full bg-black/60 top-0 left-0 z-20" />
+                <StaticImage
+                    quality={80}
+                    src="https://images.unsplash.com/photo-1596719972379-ac95de0877ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    className="w-full h-full "
+                />
+                <div className="text-white absolute z-30 text-center">
+                    <p className="text-4xl capitalize">
+                        Are You Ready?
+                    </p>
+                    <button className="text-lg mt-6 border capitalize border-white py-2 px-4">Let's Start</button>
+                </div>
+            </section>
+
             <section className="text-gray-600 body-font">
-                <div className="container px-5 py-24 mx-auto">
+                <div className="container py-6 md:py-12 px-5 pt-10 mx-auto">
                     <div className="text-center mb-20">
                         <h1 className="sm:text-3xl text-2xl font-bold text-center title-font text-gray-900 mb-4">
                             Raw Denim Heirloom Man Braid
@@ -955,7 +1017,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section className="text-gray-600 body-font relative bg-white">
+            <section id="contact" className="text-gray-600 body-font relative bg-white">
                 <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
                     <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
                         <iframe
@@ -1004,8 +1066,9 @@ const IndexPage = ({ data }) => {
                             Post-ironic portland shabby chic echo park, banjo
                             fashion axe
                         </p>
-                        <div className="relative mb-4">
+                        <div className="relative mb-2">
                             <label
+                                htmlFor="name"
                                 for="name"
                                 className="leading-7 text-sm text-gray-600"
                             >
@@ -1018,8 +1081,24 @@ const IndexPage = ({ data }) => {
                                 className="w-full bg-white rounded border border-gray-300 focus:border-gray-700 focus:ring-2 focus:ring-[#168585] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                             />
                         </div>
+                        <div className="relative mb-2">
+                            <label
+                                htmlFor="phone"
+                                for="phone"
+                                className="leading-7 text-sm text-gray-600"
+                            >
+                                Tel
+                            </label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                className="w-full bg-white rounded border border-gray-300 focus:border-gray-700 focus:ring-2 focus:ring-[#168585] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            />
+                        </div>
                         <div className="relative mb-4">
                             <label
+                                htmlFor="email"
                                 for="email"
                                 className="leading-7 text-sm text-gray-600"
                             >
@@ -1034,6 +1113,7 @@ const IndexPage = ({ data }) => {
                         </div>
                         <div className="relative mb-4">
                             <label
+                                htmlFor="message"
                                 for="message"
                                 className="leading-7 text-sm text-gray-600"
                             >
