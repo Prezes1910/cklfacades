@@ -24,7 +24,7 @@ const ArticleTemplate = ({
                 </div>
             </section>
 
-            <div class="container -mt-36 lg:-mt-16 px-6 mx-auto">
+            <section class="container -mt-36 lg:-mt-16 px-6 mx-auto">
                 <section class="mb-32 text-gray-800">
                     <div class="container mx-auto xl:px-32 text-center lg:text-left">
                         <div class="flex flex-col lg:flex-row items-center ">
@@ -48,20 +48,21 @@ const ArticleTemplate = ({
                                         }
                                     </p>
 
-                                    <button
+                                    <Link
+                                        to="/contact"
                                         type="button"
                                         class="inline-block px-7 py-3 bg-gray-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
                                         data-mdb-ripple="true"
                                         data-mdb-ripple-color="light"
                                     >
                                         Contact Now
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
+            </section>
 
             <section className="mt-10 mb-16 max-w-screen-xl mx-auto">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
