@@ -60,7 +60,7 @@ module.exports = {
                 start_url: `/`,
                 background_color: `#0C0904`,
                 theme_color: `#0C0904`,
-                display: `minimal-ui`,
+                display: `standalone`,
                 icon: `src/assets/logoBrowser.png`,
             },
         },
