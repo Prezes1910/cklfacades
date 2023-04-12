@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section id="about" className="scroll-m-10 mt-10 mb-16">
+            <section id="about" className="scroll-m-16 mt-10 mb-16">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">

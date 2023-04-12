@@ -28,7 +28,7 @@ const ArticleTemplate = ({
                         <div class="flex flex-col lg:flex-row items-center ">
                             <div>
                                 <GatsbyImage
-                                    className="w-full max-h-[20rem] lg:max-h-[40rem] max-w-screen-lg rounded-lg shadow-lg"
+                                    className="h-80 w-80 md:h-96 md:w-96 lg:p-72 rounded-lg shadow-lg"
                                     image={getImage(
                                         datoCmsAboutArticle.img.gatsbyImageData
                                     )}
