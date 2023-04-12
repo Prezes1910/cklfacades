@@ -3,10 +3,11 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
+import { Link } from "gatsby";
 
 const ArticleTemplate = ({
     pageContext: { slug },
-    data: { datoCmsAboutArticle },
+    data: { datoCmsAboutArticle, allDatoCmsAboutArticle },
 }) => {
     return (
         <Layout>
@@ -22,6 +23,7 @@ const ArticleTemplate = ({
                     <div className="w-full h-full bg-gray-900/70 absolute top-0 left-0" />
                 </div>
             </section>
+
             <div class="container -mt-36 lg:-mt-16 px-6 mx-auto">
                 <section class="mb-32 text-gray-800">
                     <div class="container mx-auto xl:px-32 text-center lg:text-left">
@@ -34,7 +36,6 @@ const ArticleTemplate = ({
                                     )}
                                     alt={datoCmsAboutArticle.img.alt}
                                 />
-                                
                             </div>
                             <div class="mb-12 lg:mb-0">
                                 <div class="block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14">
@@ -42,7 +43,9 @@ const ArticleTemplate = ({
                                         {datoCmsAboutArticle.header}
                                     </h1>
                                     <p class="text-gray-500 mb-6 pb-2">
-                                        {datoCmsAboutArticle.detailedDescription}
+                                        {
+                                            datoCmsAboutArticle.detailedDescription
+                                        }
                                     </p>
 
                                     <button
@@ -59,6 +62,53 @@ const ArticleTemplate = ({
                     </div>
                 </section>
             </div>
+
+            <section className="mt-10 mb-16 max-w-screen-xl mx-auto">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
+                    {allDatoCmsAboutArticle.edges.map(({ node }) => (
+                        <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
+                            <Link
+                                to={`/` + node.slug}
+                                className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
+                            >
+                                <GatsbyImage
+                                    className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
+                                    image={getImage(node.img.gatsbyImageData)}
+                                    alt={node.img.alt}
+                                />
+                            </Link>
+
+                            <div className="flex flex-col gap-2">
+                                <span className="text-gray-400 text-sm">
+                                    {node.date}
+                                </span>
+
+                                <h2 className="text-gray-800 w-[70%] text-xl font-bold">
+                                    <Link
+                                        to="/"
+                                        className="hoverLink  active:text-gray-900 transition duration-100"
+                                    >
+                                        {node.header}
+                                    </Link>
+                                </h2>
+
+                                <p className="text-gray-500 w-[70%]">
+                                    {node.description}
+                                </p>
+
+                                <div>
+                                    <Link
+                                        to={`/` + node.slug}
+                                        className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
+                                    >
+                                        Read more
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </Layout>
     );
 };
@@ -76,6 +126,20 @@ export const query = graphql`
             img {
                 gatsbyImageData
                 alt
+            }
+        }
+        allDatoCmsAboutArticle {
+            edges {
+                node {
+                    slug
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    header
+                    description
+                    date
+                }
             }
         }
     }
