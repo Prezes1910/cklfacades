@@ -25,7 +25,7 @@ const ArticleTemplate = ({
             </section>
 
             <section class="container -mt-36 lg:-mt-16 px-6 mx-auto">
-                <section class="mb-32 text-gray-800">
+                <section class=" mb-6 md:mb-12 xl:mb-32 text-gray-800">
                     <div class="container mx-auto xl:px-32 text-center lg:text-left">
                         <div class="flex flex-col lg:flex-row items-center ">
                             <div>
@@ -67,7 +67,7 @@ const ArticleTemplate = ({
             <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                     {allDatoCmsAboutArticle.edges.map(({ node }) => (
-                        <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
+                        <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
                             <Link
                                 to={`/` + node.slug}
                                 className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
@@ -84,7 +84,7 @@ const ArticleTemplate = ({
                                     {node.date}
                                 </span>
 
-                                <h2 className="text-gray-800 w-[70%] text-xl font-bold">
+                                <h2 className="text-gray-800 w-full md:w-[70%] text-xl font-bold">
                                     <Link
                                         to={`/` + node.slug}
                                         className="hoverLink  active:text-gray-900 transition duration-100"
@@ -93,7 +93,7 @@ const ArticleTemplate = ({
                                     </Link>
                                 </h2>
 
-                                <p className="text-gray-500 w-[70%]">
+                                <p className="text-gray-500 w-full md:w-[70%]">
                                     {node.description}
                                 </p>
 
