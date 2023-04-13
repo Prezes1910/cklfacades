@@ -384,7 +384,7 @@ const IndexPage = ({ data }) => {
                     <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
                         {allDatoCmsProjectArticle.edges.map(({ node }) => (
                             <div
-                                className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0"
+                                className="bg-white block group rounded-lg  shadow-lg mb-6 lg:mb-0"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                             >
@@ -398,8 +398,10 @@ const IndexPage = ({ data }) => {
                                         alt={node.img.alt}
                                     />
                                     <Link to={node.slug}>
-                                        <div className="absolute flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out bg-gray-800/80">
-                                            <p className="text-white font-bold tracking-widest">{node.header}</p>
+                                        <div className="absolute group-hover:translate-y-0 flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed group-hover:opacity-100 translate-y-full transition duration-300 ease-in-out bg-gray-700/90">
+                                            <p className="text-white font-bold tracking-widest">
+                                                {node.header}
+                                            </p>
                                         </div>
                                     </Link>
                                     <svg
@@ -414,17 +416,14 @@ const IndexPage = ({ data }) => {
                                     </svg>
                                 </div>
                                 <div className="p-6">
-                                    <h5 className="font-bold text-lg mb-3">
-                                        Nostalgic waves
-                                    </h5>
+                                    <h3 className="font-bold text-lg mb-3">
+                                        {node.header}
+                                    </h3>
                                     <p className="mb-4 pb-2">
-                                        Ut pretium ultricies dignissim. Sed sit
-                                        amet mi eget urna placerat vulputate. Ut
-                                        vulputate est non quam dignissim
-                                        elementum. Donec a ullamcorper diam.
+                                        {node.description}
                                     </p>
                                     <Link
-                                        to="/"
+                                        to={node.slug}
                                         data-mdb-ripple="true"
                                         data-mdb-ripple-color="light"
                                         className="btn"
@@ -434,97 +433,6 @@ const IndexPage = ({ data }) => {
                                 </div>
                             </div>
                         ))}
-                        <div className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
-                            <div
-                                className="relative overflow-hidden bg-no-repeat bg-cover"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                            >
-                                <StaticImage
-                                    alt="blabla"
-                                    src="https://images.unsplash.com/photo-1533841158507-cf3a93f3cd74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-                                    className="w-full rounded-t-lg h-52"
-                                />
-                                <Link to="/">
-                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
-                                </Link>
-                                <svg
-                                    className="absolute"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 1440 320"
-                                >
-                                    <path
-                                        fill="#fff"
-                                        d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div className="p-6">
-                                <h5 className="font-bold text-lg mb-3">
-                                    Winter wildlife
-                                </h5>
-                                <p className="mb-4 pb-2">
-                                    Suspendisse in volutpat massa. Nulla
-                                    facilisi. Sed aliquet diam orci, nec ornare
-                                    metus semper sed. Integer volutpat ornare
-                                    erat sit amet rutrum.
-                                </p>
-                                <Link
-                                    to="/"
-                                    data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light"
-                                    className="btn"
-                                >
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="bg-white block rounded-lg shadow-lg">
-                            <div
-                                className="relative overflow-hidden bg-no-repeat bg-cover"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                            >
-                                <StaticImage
-                                    alt="blablaaa"
-                                    src="https://images.unsplash.com/photo-1523121297868-a27703f88158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-                                    className="w-full rounded-t-lg h-52"
-                                />
-                                <Link to="/">
-                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
-                                </Link>
-                                <svg
-                                    className="absolute"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 1440 320"
-                                >
-                                    <path
-                                        fill="#fff"
-                                        d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div className="p-6">
-                                <h5 className="font-bold text-lg mb-3">
-                                    Camping travel
-                                </h5>
-                                <p className="mb-4 pb-2">
-                                    Curabitur tristique, mi a mollis sagittis,
-                                    metus felis mattis arcu, non vehicula nisl
-                                    dui quis diam. Mauris ut risus eget massa
-                                    volutpat feugiat.
-                                </p>
-                                <Link
-                                    to="/"
-                                    data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light"
-                                    className="btn"
-                                >
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -892,40 +800,42 @@ const IndexPage = ({ data }) => {
             <section className="relative h-96 overflow-hidden max-w-[2000px] flex flex-col items-center justify-center">
                 <div className="absolute w-full h-full bg-gray-900/90 top-0 left-0 z-20" />
                 <StaticImage
-                    quality={80}
+                    quality={60}
                     src="https://images.unsplash.com/photo-1486149266845-b44cb2835667?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                     className="w-full h-full "
                 />
-                <div className="text-white absolute w-full z-30 text-center">
-                    <div class="container  px-12 py-24 mx-auto">
-                        <div class="flex flex-wrap -m-4 text-center">
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    2.7K
-                                </h2>
-                                <p class="leading-relaxed">Users</p>
-                            </div>
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    1.8K
-                                </h2>
-                                <p class="leading-relaxed">Subscribes</p>
-                            </div>
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    35
-                                </h2>
-                                <p class="leading-relaxed">Downloads</p>
-                            </div>
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    4
-                                </h2>
-                                <p class="leading-relaxed">Products</p>
+                {allDatoCmsArticle.edges.map(({ node }) => (
+                    <div className="text-white absolute w-full z-30 text-center">
+                        <div class="container  px-12 py-24 mx-auto">
+                            <div class="flex flex-wrap -m-4 text-center">
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        2.7K
+                                    </h2>
+                                    <p class="leading-relaxed">Users</p>
+                                </div>
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        1.8K
+                                    </h2>
+                                    <p class="leading-relaxed">Subscribes</p>
+                                </div>
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        35
+                                    </h2>
+                                    <p class="leading-relaxed">Downloads</p>
+                                </div>
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        4
+                                    </h2>
+                                    <p class="leading-relaxed">Products</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </section>
 
             <section className="text-gray-600 body-font">

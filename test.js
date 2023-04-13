@@ -1,21 +1,5 @@
 export const query = graphql`
     query MyQuery {
-        allDatoCmsProjectArticle(
-            limit: 3
-            sort: { meta: { firstPublishedAt: DESC } }
-        ) {
-            edges {
-                node {
-                    description
-                    header
-                    img {
-                        alt
-                        gatsbyImageData
-                    }
-                    slug
-                }
-            }
-        }
         allDatoCmsNumberSection {
             edges {
                 node {
