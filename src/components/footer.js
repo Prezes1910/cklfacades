@@ -64,7 +64,7 @@ const Footer = () => (
                         </Link>
 
                         <Link
-                            to="/"
+                            to="https://www.linkedin.com/company/ckl-facades/?fbclid=IwAR2BI5yn7XTImJnXJ9Pl0OmsGPAA8fFKzTba0CPcDrkQxkUtcQJtEX_CIMQ"
                             className=" transition duration-100 hover:text-gray-500 "
                         >
                             <svg
@@ -84,7 +84,7 @@ const Footer = () => (
 
                 <div>
                     <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                        Products
+                    Quick Links 
                     </div>
 
                     <nav className="flex flex-col gap-4">
@@ -93,36 +93,28 @@ const Footer = () => (
                                 to="/" 
                                 className=" transition duration-100 hoverLink"
                             >
-                                Overview
+                                Home
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="/"
+                                to="/#about"
                                 className=" transition duration-100 hoverLink"
                             >
-                                Solutions
+                                About
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="/"
+                                to="/#services"
                                 className=" transition duration-100 hoverLink"
                             >
-                                Pricing
+                                Services
                             </Link>
                         </div>
 
-                        <div>
-                            <Link
-                                to="/"
-                                className=" transition duration-100 hoverLink"
-                            >
-                                Customers
-                            </Link>
-                        </div>
                     </nav>
                 </div>
 
@@ -132,39 +124,22 @@ const Footer = () => (
                     </div>
 
                     <nav className="flex flex-col gap-4">
-                        <div>
-                            <Link
-                                to="/"
-                                className=" transition duration-100 hoverLink"
-                            >
-                                About
-                            </Link>
-                        </div>
 
                         <div>
                             <Link
                                 to="/"
                                 className=" transition duration-100 hoverLink"
                             >
-                                Investor Relations
+                                Projects
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="/"
+                                to="/jobs"
                                 className=" transition duration-100 hoverLink"
                             >
                                 Jobs
-                            </Link>
-                        </div>
-
-                        <div>
-                            <Link
-                                to="/"
-                                className=" transition duration-100 hoverLink"
-                            >
-                                Press
                             </Link>
                         </div>
                     </nav>
@@ -178,7 +153,7 @@ const Footer = () => (
                     <nav className="flex flex-col gap-4">
                         <div>
                             <Link
-                                to="/"
+                                to="/#contact"
                                 className=" transition duration-100 hoverLink"
                             >
                                 Contact
@@ -187,7 +162,7 @@ const Footer = () => (
 
                         <div>
                             <Link
-                                to="/"
+                                to="/#contact"
                                 className=" transition duration-100 hoverLink"
                             >
                                 Chat
@@ -204,19 +179,19 @@ const Footer = () => (
                     <nav className="flex flex-col gap-4">
                         <div>
                             <Link
-                                to="/"
+                                to="/privacy-policy"
                                 className=" transition duration-100 hoverLink"
                             >
-                                Terms of Service
+                                Privacy Policy
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="/"
+                                to="/cookies"
                                 className=" transition duration-100 hoverLink"
                             >
-                                Privacy Policy
+                               Cookies
                             </Link>
                         </div>
 

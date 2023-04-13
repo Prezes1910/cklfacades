@@ -20,8 +20,9 @@ const IndexPage = ({ data }) => {
                 <div className=" -mt-8 w-full -z-20">
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
-                        quality={100}
+                        quality={90}
                         src="../assets/hero.png"
+                        loading="eager"
                         placeholder="blurred"
                     />
                 </div>
@@ -49,7 +50,6 @@ const IndexPage = ({ data }) => {
                     <div className="h-8 w-[2px] my-4 bg-gray-600 rounded-3xl" />
                     <Link
                         to="https://www.linkedin.com/company/ckl-facades/?fbclid=IwAR2BI5yn7XTImJnXJ9Pl0OmsGPAA8fFKzTba0CPcDrkQxkUtcQJtEX_CIMQ"
-                        target="_blank"
                         rel="noopener noreferrer"
                     >
                         <svg
@@ -89,6 +89,7 @@ const IndexPage = ({ data }) => {
                                 >
                                     <GatsbyImage
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
+                                        loading="eager"
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
