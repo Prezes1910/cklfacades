@@ -259,10 +259,10 @@ const IndexPage = ({ data }) => {
                             characteristics of a real written text but is random
                             or otherwise generated.
                         </p>
-                        <div className="hidden w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
-                            <div className="mx-auto flex max-w-screen-lg items-center gap-8 p-8">
-                                <div className="grid w-2/3 grid-cols-2 gap-8">
-                                    <div className="group flex gap-4">
+                        <div className="w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
+                            <div className="mx-auto flex flex-col lg:flex-row max-w-screen-lg items-center gap-8 p-8">
+                                <div className="grid w-2/3 grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div className="group flex-col md:flex-row flex gap-4">
                                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -292,7 +292,7 @@ const IndexPage = ({ data }) => {
                                         </div>
                                     </div>
 
-                                    <div className="group flex gap-4">
+                                    <div className="group flex-col md:flex-row flex gap-4">
                                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -322,7 +322,7 @@ const IndexPage = ({ data }) => {
                                         </div>
                                     </div>
 
-                                    <div className="group flex gap-4">
+                                    <div className="group flex-col md:flex-row flex gap-4">
                                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -352,7 +352,7 @@ const IndexPage = ({ data }) => {
                                         </div>
                                     </div>
 
-                                    <div className="group flex gap-4">
+                                    <div className="group flex-col md:flex-row flex gap-4">
                                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -377,7 +377,7 @@ const IndexPage = ({ data }) => {
                                     </div>
                                 </div>
 
-                                <div className="w-1/3 overflow-hidden rounded-lg border">
+                                <div className="w-full sm:w-1/2 lg:w-1/3 overflow-hidden rounded-lg border">
                                     <div className="h-48 bg-gray-100">
                                         <img
                                             src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
