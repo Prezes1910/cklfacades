@@ -400,7 +400,6 @@ const IndexPage = ({ data }) => {
                                     <Link to={node.slug}>
                                         <div className="absolute flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out bg-gray-800/80">
                                             <p className="text-white font-bold tracking-widest">{node.header}</p>
-                                            <StaticImage src=""
                                         </div>
                                     </Link>
                                     <svg
