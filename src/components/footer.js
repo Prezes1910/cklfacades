@@ -90,7 +90,7 @@ const Footer = () => (
                     <nav className="flex flex-col gap-4">
                         <div>
                             <Link
-                                to="/"
+                                to="/" 
                                 className=" transition duration-100 hoverLink"
                             >
                                 Overview
