@@ -86,7 +86,7 @@ const ArticleTemplate = ({
 
                                 <h2 className="text-gray-800 w-[70%] text-xl font-bold">
                                     <Link
-                                        to="/"
+                                        to={`/` + node.slug}
                                         className="hoverLink  active:text-gray-900 transition duration-100"
                                     >
                                         {node.header}
@@ -114,7 +114,7 @@ const ArticleTemplate = ({
     );
 };
 
-export const Head = () => <Seo title="ArticleTemplate" />;
+export const Head = () => <Seo title="Facades Project" />;
 
 export default ArticleTemplate;
 
@@ -129,7 +129,7 @@ export const query = graphql`
                 alt
             }
         }
-        allDatoCmsAboutArticle {
+        allDatoCmsAboutArticle(sort: { date: DESC }) {
             edges {
                 node {
                     slug

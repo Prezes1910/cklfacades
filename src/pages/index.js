@@ -165,13 +165,7 @@ const IndexPage = ({ data }) => {
                                 <br />
                                 This is a section of some simple filler text,
                                 also known as placeholder text. It shares some
-                                characteristics of a real written text but is{" "}
-                                <Link
-                                    to="/"
-                                    className="text-[#168585] underline transition duration-100 hover:text-gray-900 active:text-gray-900"
-                                >
-                                    random
-                                </Link>{" "}
+                                characteristics of a real written text but is
                                 or otherwise generated. It may be used to
                                 display a sample of fonts or generate text for
                                 testing. Filler text is dummy text which has no
@@ -339,19 +333,6 @@ const IndexPage = ({ data }) => {
                                             alt="seovileo"
                                             className="h-full w-full object-cover object-center"
                                         />
-                                    </div>
-
-                                    <div className="flex items-center justify-between gap-2 bg-white p-3">
-                                        <p className="text-sm text-gray-500">
-                                            This is some simple filler text.
-                                        </p>
-
-                                        <Link
-                                            to="/"
-                                            className="inline-block shrink-0 rounded-lg border bg-white px-3 py-1 text-sm font-semibold text-[#168585] outline-none ring-[#168585] transition duration-100 hover:bg-gray-50 focus-visible:ring active:bg-gray-100"
-                                        >
-                                            More
-                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -851,14 +832,15 @@ const IndexPage = ({ data }) => {
                                                 </p>
                                             </div>
                                         </div>
-                                        <button
+                                        <Link
+                                            to="/#contact"
                                             type="button"
                                             className="btn w-full md:w-auto"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
                                             Contact Now
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -1142,82 +1124,82 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
 query MyQuery {
     allDatoCmsHeroTitle {
-        edges {
-            node {
-                heroTitle
-            }
+      edges {
+        node {
+          heroTitle
         }
+      }
     }
     allDatoCmsAbout {
-        edges {
-            node {
-                aboutUs
-            }
+      edges {
+        node {
+          aboutUs
         }
+      }
     }
-    allDatoCmsAboutArticle {
-        edges {
-            node {
-              slug
-                img {
-                    alt
-                    gatsbyImageData
-                }
-                header
-                description
-                date
-            }
+    allDatoCmsAboutArticle(limit: 4, sort: {date: DESC}) {
+      edges {
+        node {
+          slug
+          img {
+            alt
+            gatsbyImageData
+          }
+          header
+          description
+          date
         }
+      }
     }
     allDatoCmsChooseAPlan {
-        edges {
-            node {
-                chooseAPlan
-            }
+      edges {
+        node {
+          chooseAPlan
         }
+      }
     }
     allDatoCmsPlanCard {
-        edges {
-            node {
-                pointc1
-                pointc2
-                pointc3
-                pointx1
-                pointx2
-                pointx3
-                pointx4
-                pointx5
-                price
-                price2
-                priceDeleted
-                priceDeleted2
-                promo
-                title
-                title2
-                smallHeader
-                smallHeader2
-            }
+      edges {
+        node {
+          pointc1
+          pointc2
+          pointc3
+          pointx1
+          pointx2
+          pointx3
+          pointx4
+          pointx5
+          price
+          price2
+          priceDeleted
+          priceDeleted2
+          promo
+          title
+          title2
+          smallHeader
+          smallHeader2
         }
+      }
     }
     allDatoCmsArticle {
-        edges {
-            node {
-                description
-                header
-                img {
-                    alt
-                    gatsbyImageData
-                }
-                pointx1
-                pointx2
-                pointx3
-                pointx4
-                pointx5
-                pointx6
-            }
+      edges {
+        node {
+          description
+          header
+          img {
+            alt
+            gatsbyImageData
+          }
+          pointx1
+          pointx2
+          pointx3
+          pointx4
+          pointx5
+          pointx6
         }
+      }
     }
-}
+  }
 `;
 
 export const Head = () => <Seo title="CKL Facades" />;
