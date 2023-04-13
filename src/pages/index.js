@@ -11,9 +11,16 @@ const IndexPage = ({ data }) => {
         allDatoCmsHeroTitle,
         allDatoCmsAbout,
         allDatoCmsAboutArticle,
+        allDatoCmsInfoSection,
+        allDatoCmsAdvantage,
+        allDatoCmsProjectHeader,
+        allDatoCmsProjectArticle,
         allDatoCmsChooseAPlan,
         allDatoCmsPlanCard,
         allDatoCmsArticle,
+        allDatoCmsNumberSection,
+        allDatoCmsBadgesHeader,
+        allDatoCmsBadgesPotin,
     } = data;
 
     const [changeLanguage, setLanguage] = useState(false);
@@ -183,269 +190,251 @@ const IndexPage = ({ data }) => {
 
             <section className="bg-white py-6 sm:py-8 lg:py-12">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
-                        <div className="order-1">
-                            <div className="max-h-[35rem] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-                                <StaticImage
-                                    src="https://images.unsplash.com/photo-1604092038795-ecd577310c83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                                    loading="lazy"
-                                    quality={100}
-                                    alt="by unsplash"
-                                    className="h-full w-full object-cover object-center"
-                                />
+                    {allDatoCmsInfoSection.edges.map(({ node }) => (
+                        <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+                            <div className="order-1">
+                                <div className="max-h-[35rem] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
+                                    <GatsbyImage
+                                        className="h-full w-full object-cover object-center"
+                                        loading="lazy"
+                                        image={getImage(
+                                            node.img.gatsbyImageData
+                                        )}
+                                        alt={node.img.alt}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="md:pt-8 ">
+                                <p className="text-center font-bold text-[#168585] md:text-left">
+                                    {node.smallHeader}
+                                </p>
+
+                                <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-left">
+                                    {node.header1}
+                                </h1>
+
+                                <p className="mb-6 text-gray-600 md:mb-8">
+                                    {node.description1}
+                                </p>
+
+                                <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
+                                    {node.header2}
+                                </h2>
+
+                                <p className=" text-gray-600 md:mb-8">
+                                    {node.description2}
+                                </p>
                             </div>
                         </div>
-
-                        <div className="md:pt-8 ">
-                            <p className="text-center font-bold text-[#168585] md:text-left">
-                                Who we are
-                            </p>
-
-                            <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-left">
-                                Our competitive advantage
-                            </h1>
-
-                            <p className="mb-6 text-gray-600 md:mb-8">
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
-                                <br />
-                                <br />
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is or
-                                otherwise generated. It may be used to display a
-                                sample of fonts or generate text for testing.
-                                Filler text is dummy text which has no meaning
-                                however looks very similar to real text.
-                            </p>
-
-                            <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
-                                About us
-                            </h2>
-
-                            <p className=" text-gray-600 md:mb-8">
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
-                            </p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
             <section className="pt-6 lg:pt-16">
                 <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-                    <div className="rounded-lg bg-gray-100 shadow-md px-4 py-6 md:py-8 lg:py-12">
-                        <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
-                            Introducing
-                        </p>
+                    {allDatoCmsAdvantage.edges.map(({ node }) => (
+                        <div className="rounded-lg bg-gray-100 shadow-md px-4 py-6 md:py-8 lg:py-12">
+                            <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
+                                {node.smallHeader}
+                            </p>
 
-                        <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-                            Revolutionary way to build the web
-                        </h2>
+                            <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+                                {node.header}
+                            </h2>
 
-                        <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-                            This is a section of some simple filler text, also
-                            known as placeholder text. It shares some
-                            characteristics of a real written text but is random
-                            or otherwise generated.
-                        </p>
-                        <div className="w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
-                            <div className="mx-auto flex flex-col lg:flex-row max-w-screen-lg items-center gap-8 p-8">
-                                <div className="grid w-2/3 grid-cols-1 md:grid-cols-2 gap-8">
-                                    <div className="group flex-col md:flex-row flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                                                />
-                                            </svg>
+                            <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
+                                {node.description}
+                            </p>
+                            <div className="w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
+                                <div className="mx-auto flex flex-col lg:flex-row max-w-screen-lg items-center gap-8 p-8">
+                                    <div className="grid w-2/3 grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx1}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx1}
+                                                </p>
+                                            </div>
                                         </div>
 
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Growth
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                                    />
+                                                </svg>
                                             </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx2}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx2}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx3}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx3}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-5 w-5"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx4}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx4}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div className="group flex-col md:flex-row flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                                                />
-                                            </svg>
+                                    <div className="w-full sm:w-1/2 lg:w-1/3 overflow-hidden rounded-lg border">
+                                        <div className="h-48 bg-gray-100">
+                                            <img
+                                                src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
+                                                loading="lazy"
+                                                alt="seovileo"
+                                                className="h-full w-full object-cover object-center"
+                                            />
                                         </div>
-
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Security
-                                            </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="group flex-col md:flex-row flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                                                />
-                                            </svg>
-                                        </div>
-
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Cloud
-                                            </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="group flex-col md:flex-row flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-5 w-5"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
-                                            >
-                                                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-                                            </svg>
-                                        </div>
-
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Analytics
-                                            </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="w-full sm:w-1/2 lg:w-1/3 overflow-hidden rounded-lg border">
-                                    <div className="h-48 bg-gray-100">
-                                        <img
-                                            src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
-                                            loading="lazy"
-                                            alt="seovileo"
-                                            className="h-full w-full object-cover object-center"
-                                        />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
             <section className="max-w-screen-xl mt-12 px-6 lg:px-12 mx-auto">
                 <div className="lg:mb-20 text-gray-800 text-center lg:text-left">
-                    <h2 className="text-3xl font-bold mb-12 text-center">
-                        Projects we are proud of Xyz
-                    </h2>
+                    {allDatoCmsProjectHeader.edges.map(({ node }) => (
+                        <h2 className="text-3xl font-bold mb-12 text-center">
+                            {node.header}
+                        </h2>
+                    ))}
 
                     <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
-                        <div
-                            className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
-                        >
-                            <div className="relative overflow-hidden bg-no-repeat bg-cover">
-                                <StaticImage
-                                    alt="bla bla"
-                                    src="https://images.unsplash.com/photo-1530512878321-60525c2283bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
-                                    className="w-full rounded-t-lg h-52"
-                                />
-                                <Link to="/">
-                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
-                                </Link>
-                                <svg
-                                    className="absolute"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 1440 320"
-                                >
-                                    <path
-                                        fill="#fff"
-                                        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                                    ></path>
-                                </svg>
+                        {allDatoCmsProjectArticle.edges.map(({ node }) => (
+                            <div
+                                className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="light"
+                            >
+                                <div className="relative overflow-hidden bg-no-repeat bg-cover">
+                                    <GatsbyImage
+                                        className="w-full rounded-t-lg h-52"
+                                        loading="lazy"
+                                        image={getImage(
+                                            node.img.gatsbyImageData
+                                        )}
+                                        alt={node.img.alt}
+                                    />
+                                    <Link to={node.slug}>
+                                        <div className="absolute flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out bg-gray-800/80">
+                                            <p className="text-white font-bold tracking-widest">{node.header}</p>
+                                            <StaticImage src=""
+                                        </div>
+                                    </Link>
+                                    <svg
+                                        className="absolute"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 1440 320"
+                                    >
+                                        <path
+                                            fill="#fff"
+                                            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div className="p-6">
+                                    <h5 className="font-bold text-lg mb-3">
+                                        Nostalgic waves
+                                    </h5>
+                                    <p className="mb-4 pb-2">
+                                        Ut pretium ultricies dignissim. Sed sit
+                                        amet mi eget urna placerat vulputate. Ut
+                                        vulputate est non quam dignissim
+                                        elementum. Donec a ullamcorper diam.
+                                    </p>
+                                    <Link
+                                        to="/"
+                                        data-mdb-ripple="true"
+                                        data-mdb-ripple-color="light"
+                                        className="btn"
+                                    >
+                                        Learn more
+                                    </Link>
+                                </div>
                             </div>
-                            <div className="p-6">
-                                <h5 className="font-bold text-lg mb-3">
-                                    Nostalgic waves
-                                </h5>
-                                <p className="mb-4 pb-2">
-                                    Ut pretium ultricies dignissim. Sed sit amet
-                                    mi eget urna placerat vulputate. Ut
-                                    vulputate est non quam dignissim elementum.
-                                    Donec a ullamcorper diam.
-                                </p>
-                                <Link
-                                    to="/"
-                                    data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light"
-                                    className="btn"
-                                >
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
-
+                        ))}
                         <div className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
                             <div
                                 className="relative overflow-hidden bg-no-repeat bg-cover"
@@ -1227,6 +1216,94 @@ export const query = graphql`
                     header
                     description
                     date
+                }
+            }
+        }
+        allDatoCmsInfoSection {
+            edges {
+                node {
+                    description1
+                    description2
+                    header1
+                    header2
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    smallHeader
+                }
+            }
+        }
+        allDatoCmsAdvantage {
+            edges {
+                node {
+                    description
+                    descriptionPointx1
+                    descriptionPointx2
+                    descriptionPointx3
+                    descriptionPointx4
+                    header
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    pointx1
+                    pointx2
+                    pointx3
+                    pointx4
+                    smallHeader
+                }
+            }
+        }
+        allDatoCmsProjectHeader {
+            edges {
+                node {
+                    header
+                }
+            }
+        }
+        allDatoCmsProjectArticle(
+            limit: 3
+            sort: { meta: { firstPublishedAt: DESC } }
+        ) {
+            edges {
+                node {
+                    description
+                    header
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    slug
+                }
+            }
+        }
+        allDatoCmsNumberSection {
+            edges {
+                node {
+                    number1
+                    number2
+                    number3
+                    number4
+                    word1
+                    word2
+                    word3
+                    word4
+                }
+            }
+        }
+        allDatoCmsBadgesHeader {
+            edges {
+                node {
+                    description
+                    header
+                }
+            }
+        }
+        allDatoCmsBadgesPotin(sort: { meta: { firstPublishedAt: DESC } }) {
+            edges {
+                node {
+                    smallDescription
                 }
             }
         }
