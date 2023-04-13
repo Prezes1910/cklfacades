@@ -12,10 +12,6 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: `gatsby-transformer-remark`,
-            options: {},
-        },
-        {
             resolve: `gatsby-source-datocms`,
             options: {
                 apiToken: `8e49b0a85e31a25874cd0ce5eb14f2`,
@@ -46,8 +42,8 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-              name: `content`,
-              path: `${__dirname}/src/content`,
+              name: `src`,
+              path: `${__dirname}/src`,
             },
           },
         `gatsby-transformer-sharp`,

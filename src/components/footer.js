@@ -193,15 +193,6 @@ const Footer = () => (
                                 Chat
                             </Link>
                         </div>
-
-                        <div>
-                            <Link
-                                to="/"
-                                className=" transition duration-100 hoverLink"
-                            >
-                                FAQ
-                            </Link>
-                        </div>
                     </nav>
                 </div>
 

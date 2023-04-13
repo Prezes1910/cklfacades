@@ -341,7 +341,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section className="container mt-12 px-6 lg:px-12 mx-auto">
+            <section className="max-w-screen-xl mt-12 px-6 lg:px-12 mx-auto">
                 <div className="lg:mb-20 text-gray-800 text-center lg:text-left">
                     <h2 className="text-3xl font-bold mb-12 text-center">
                         Projects we are proud of Xyz
@@ -714,7 +714,7 @@ const IndexPage = ({ data }) => {
 
             <section className="max-w-screen-xl my-6 md:my-24 px-3 mx-auto">
                 <section className="text-gray-800">
-                    <div className="block rounded-lg shadow-lg bg-white">
+                    <div className="block rounded-lg bg-white">
                         {allDatoCmsArticle.edges.map(({ node }) => (
                             <div className="flex flex-wrap items-center">
                                 <div className="relative grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12">
