@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
                     </Link>
                 </div>
 
-                <div className="text-gray-300 hidden md:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3">
+                <div className="text-gray-300 hidden lg:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3">
                     {["L", "I", "N", "K", "E", "D", "I", "N"].map(
                         (letter, index) => (
                             <p key={index}>{letter}</p>
@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsAboutArticle.edges.map(({ node }) => (
-                            <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
+                            <div className="flex flex-col md:flex-row items-start gap-4 lg:gap-6">
                                 <Link
                                     to={node.slug}
                                     className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
@@ -101,7 +101,7 @@ const IndexPage = ({ data }) => {
                                         {node.date}
                                     </span>
 
-                                    <h2 className="text-gray-800 w-[70%] text-xl font-bold">
+                                    <h2 className="text-gray-800 w-[93%] lg:w-[70%] text-xl font-bold">
                                         <Link
                                             to="/"
                                             className="hoverLink  active:text-gray-900 transition duration-100"
@@ -110,7 +110,7 @@ const IndexPage = ({ data }) => {
                                         </Link>
                                     </h2>
 
-                                    <p className="text-gray-500 w-[70%]">
+                                    <p className="text-gray-500 w-[93%] lg:w-[70%]">
                                         {node.description}
                                     </p>
 
@@ -165,18 +165,18 @@ const IndexPage = ({ data }) => {
                                 <br />
                                 This is a section of some simple filler text,
                                 also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
+                                characteristics of a real written text but is or
+                                otherwise generated. It may be used to display a
+                                sample of fonts or generate text for testing.
+                                Filler text is dummy text which has no meaning
+                                however looks very similar to real text.
                             </p>
 
                             <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
                                 About us
                             </h2>
 
-                            <p className="mb-6 text-gray-600 md:mb-8">
+                            <p className=" text-gray-600 md:mb-8">
                                 This is a section of some simple filler text,
                                 also known as placeholder text. It shares some
                                 characteristics of a real written text but is
@@ -192,7 +192,7 @@ const IndexPage = ({ data }) => {
 
             <section className="pt-6 lg:pt-16">
                 <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-                    <div className="rounded-lg bg-gray-100 shadow-lg px-4 py-6 md:py-8 lg:py-12">
+                    <div className="rounded-lg bg-gray-100 shadow-md px-4 py-6 md:py-8 lg:py-12">
                         <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
                             Introducing
                         </p>
@@ -850,17 +850,41 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section className="relative h-96 overflow-hidden max-w-[2000px] flex flex-col items-center justify-center">
-                <div className="absolute w-full h-full bg-black/60 top-0 left-0 z-20" />
+                <div className="absolute w-full h-full bg-gray-900/90 top-0 left-0 z-20" />
                 <StaticImage
                     quality={80}
-                    src="https://images.unsplash.com/photo-1596719972379-ac95de0877ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    src="https://images.unsplash.com/photo-1486149266845-b44cb2835667?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                     className="w-full h-full "
                 />
-                <div className="text-white absolute z-30 text-center">
-                    <p className="text-4xl capitalize">
-                        Are You Ready?
-                    </p>
-                    <button className="text-lg mt-6 border capitalize border-white py-2 px-4">Let's Start</button>
+                <div className="text-white absolute w-full z-30 text-center">
+                    <div class="container  px-12 py-24 mx-auto">
+                        <div class="flex flex-wrap -m-4 text-center">
+                            <div class="p-4 sm:w-1/4 w-1/2">
+                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                    2.7K
+                                </h2>
+                                <p class="leading-relaxed">Users</p>
+                            </div>
+                            <div class="p-4 sm:w-1/4 w-1/2">
+                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                    1.8K
+                                </h2>
+                                <p class="leading-relaxed">Subscribes</p>
+                            </div>
+                            <div class="p-4 sm:w-1/4 w-1/2">
+                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                    35
+                                </h2>
+                                <p class="leading-relaxed">Downloads</p>
+                            </div>
+                            <div class="p-4 sm:w-1/4 w-1/2">
+                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                    4
+                                </h2>
+                                <p class="leading-relaxed">Products</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -992,15 +1016,18 @@ const IndexPage = ({ data }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center mt-8 mb-6">
+                    <div className="flex items-center justify-center mt-6 mb-3">
                         <button className=" btn mx-2">Button</button>
                         <button className=" btn mx-2">Button</button>
                     </div>
                 </div>
             </section>
 
-            <section id="contact" className="text-gray-600 body-font relative bg-white">
-                <div className="container px-5 py-24 mx-auto flex md:flex-nowrap flex-wrap">
+            <section
+                id="contact"
+                className="text-gray-600 body-font relative bg-white"
+            >
+                <div className="container px-5 py-12 md:py-24 mx-auto flex md:flex-nowrap flex-wrap">
                     <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
                         <iframe
                             width="100%"
@@ -1122,84 +1149,84 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-query MyQuery {
-    allDatoCmsHeroTitle {
-      edges {
-        node {
-          heroTitle
+    query MyQuery {
+        allDatoCmsHeroTitle {
+            edges {
+                node {
+                    heroTitle
+                }
+            }
         }
-      }
-    }
-    allDatoCmsAbout {
-      edges {
-        node {
-          aboutUs
+        allDatoCmsAbout {
+            edges {
+                node {
+                    aboutUs
+                }
+            }
         }
-      }
-    }
-    allDatoCmsAboutArticle(limit: 4, sort: {date: DESC}) {
-      edges {
-        node {
-          slug
-          img {
-            alt
-            gatsbyImageData
-          }
-          header
-          description
-          date
+        allDatoCmsAboutArticle(limit: 4, sort: { date: DESC }) {
+            edges {
+                node {
+                    slug
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    header
+                    description
+                    date
+                }
+            }
         }
-      }
-    }
-    allDatoCmsChooseAPlan {
-      edges {
-        node {
-          chooseAPlan
+        allDatoCmsChooseAPlan {
+            edges {
+                node {
+                    chooseAPlan
+                }
+            }
         }
-      }
-    }
-    allDatoCmsPlanCard {
-      edges {
-        node {
-          pointc1
-          pointc2
-          pointc3
-          pointx1
-          pointx2
-          pointx3
-          pointx4
-          pointx5
-          price
-          price2
-          priceDeleted
-          priceDeleted2
-          promo
-          title
-          title2
-          smallHeader
-          smallHeader2
+        allDatoCmsPlanCard {
+            edges {
+                node {
+                    pointc1
+                    pointc2
+                    pointc3
+                    pointx1
+                    pointx2
+                    pointx3
+                    pointx4
+                    pointx5
+                    price
+                    price2
+                    priceDeleted
+                    priceDeleted2
+                    promo
+                    title
+                    title2
+                    smallHeader
+                    smallHeader2
+                }
+            }
         }
-      }
-    }
-    allDatoCmsArticle {
-      edges {
-        node {
-          description
-          header
-          img {
-            alt
-            gatsbyImageData
-          }
-          pointx1
-          pointx2
-          pointx3
-          pointx4
-          pointx5
-          pointx6
+        allDatoCmsArticle {
+            edges {
+                node {
+                    description
+                    header
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    pointx1
+                    pointx2
+                    pointx3
+                    pointx4
+                    pointx5
+                    pointx6
+                }
+            }
         }
-      }
     }
-  }
 `;
 
 export const Head = () => <Seo title="CKL Facades" />;
