@@ -49,7 +49,7 @@ const ArticleTemplate = ({
                                     </p>
 
                                     <Link
-                                        to="/contact"
+                                        to="/#contact"
                                         type="button"
                                         class="inline-block px-7 py-3 bg-gray-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
                                         data-mdb-ripple="true"
