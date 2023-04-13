@@ -12,11 +12,6 @@ const Header = () => {
         setMenu(false);
     };
 
-    const [changeLanguage, setLanguage] = useState(false);
-    const HandleLanguage = () => {
-        setLanguage(!changeLanguage);
-    };
-
     const [navbar, setNavbar] = useState(false);
 
     const changeBackground = () => {
@@ -191,57 +186,13 @@ const Header = () => {
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/pl"
+                                to="/pl/#contact"
                             >
                                 Kontakt
                             </Link>
                         </li>
                     </ul>
-                    <button
-                        onClick={HandleLanguage}
-                        className={!navbar ? "absolute flex items-center justify-center right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100" : "hidden"}
-                    >
-                        <StaticImage
-                            height={20}
-                            width={20}
-                            placeholder="blurred"
-                            src="../../assets/language/poland.png"
-                        />
-                        <div
-                            className={
-                                changeLanguage
-                                    ? "absolute flex flex-col items-center justify-start rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-100 transition-transform duration-50"
-                                    : "absolute rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-50"
-                            }
-                        >
-                            <Link
-                                to="/"
-                                className="flex items-center justify-start px-6 w-full hover:bg-gray-700"
-                            >
-                                <StaticImage
-                                    height={12}
-                                    width={12}
-                                    layout="fixed"
-                                    placeholder="blurred"
-                                    src="../../assets/language/uk.png"
-                                />
-                                <p className="ml-2">English</p>
-                            </Link>
-                            <Link
-                                to="/pl"
-                                className="flex items-center justify-start px-6 mt-3 w-full hover:bg-gray-700"
-                            >
-                                <StaticImage
-                                    height={12}
-                                    width={12}
-                                    layout="fixed"
-                                    placeholder="blurred"
-                                    src="../../assets/language/poland.png"
-                                />
-                                <p className="ml-2">Polish</p>
-                            </Link>
-                        </div>
-                    </button>
+                 
                 </nav>
             </div>
         </header>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -14,9 +15,59 @@ const IndexPage = ({ data }) => {
         allDatoCmsPlanCard,
         allDatoCmsArticle,
     } = data;
+
+    const [changeLanguage, setLanguage] = useState(false);
+    const HandleLanguage = () => {
+        setLanguage(!changeLanguage);
+    };
     return (
         <Layout>
             <section className="relative flex items-center min-h-[16rem] justify-center w-full overflow-hidden">
+                <button
+                    onClick={HandleLanguage}
+                    className="absolute flex items-center justify-center top-[2.2vh] sm:top-[1.5vh] lg:top-10 z-[99] right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100"
+                >
+                    <StaticImage
+                        height={20}
+                        width={20}
+                        placeholder="blurred"
+                        src="../assets/language/uk.png"
+                    />
+                    <div
+                        className={
+                            changeLanguage
+                                ? "absolute flex flex-col items-center justify-start rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-100 transition-transform duration-50"
+                                : "absolute rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-50"
+                        }
+                    >
+                        <Link
+                            to="/"
+                            className="flex items-center justify-start px-6 w-full hover:bg-gray-700"
+                        >
+                            <StaticImage
+                                height={12}
+                                width={12}
+                                layout="fixed"
+                                placeholder="blurred"
+                                src="../assets/language/uk.png"
+                            />
+                            <p className="ml-2">English</p>
+                        </Link>
+                        <Link
+                            to="/pl"
+                            className="flex items-center justify-start px-6 mt-3 w-full hover:bg-gray-700"
+                        >
+                            <StaticImage
+                                height={12}
+                                width={12}
+                                layout="fixed"
+                                placeholder="blurred"
+                                src="../assets/language/poland.png"
+                            />
+                            <p className="ml-2">Polish</p>
+                        </Link>
+                    </div>
+                </button>
                 <div className=" -mt-8 w-full -z-20">
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
