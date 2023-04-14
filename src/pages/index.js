@@ -96,7 +96,7 @@ const IndexPage = ({ data }) => {
                         </h1>
                     ))}
                     <Link
-                        to="/"
+                        to="/about-us"
                         className="mt-2 lg:mt-6 hover:bg-black transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
                     >
                         Show More

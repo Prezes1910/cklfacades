@@ -50,7 +50,7 @@ const ProjectTemplatePL = ({
                                     </p>
 
                                     <Link
-                                        to="/pl/#about"
+                                        to="/pl/#projects"
                                         type="button"
                                         class="inline-block mb-4 px-7 mr-4 py-3 bg-gray-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
                                         data-mdb-ripple="true"
