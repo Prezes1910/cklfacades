@@ -7,8 +7,12 @@ module.exports = {
     siteMetadata: {
         title: `Building envelope and facade design`,
         description: `Technical and design services to the building envelope and facade industry`,
-        author: `@Seovileo`,
+        author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
+        titlePL: `Projekt przegród budowlanych i elewacji`,
+        descriptionPL: `Usługi techniczne i projektowe dla przemysłu przegród budowlanych i elewacji`,
+        authorPL: `Seovileo`,
+        siteUrlPL: `https://seovileo.pl/`,
     },
     plugins: [
         {

@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../../components/pl/layoutPL";
-import Seo from "../../components/seo";
+import Seo from "../../components/pl/seoPL";
 import { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
@@ -8,12 +8,19 @@ import { Link } from "gatsby";
 
 const IndexPage = ({ data }) => {
     const {
-        allDatoCmsHeroTitle,
-        allDatoCmsAbout,
-        allDatoCmsAboutArticle,
-        allDatoCmsChooseAPlan,
-        allDatoCmsPlanCard,
-        allDatoCmsArticle,
+        allDatoCmsHeroTitleCopy1,
+        allDatoCmsAboutCopy1,
+        allDatoCmsAboutArticleCopy1,
+        allDatoCmsInfoSectionCopy1,
+        allDatoCmsAdvantageCopy1,
+        allDatoCmsProjectHeaderCopy1,
+        allDatoCmsProjectArticleCopy1,
+        allDatoCmsChooseAPlanCopy1,
+        allDatoCmsPlanCardCopy1,
+        allDatoCmsArticleCopy1,
+        allDatoCmsNumberSectionCopy1,
+        allDatoCmsBadgesHeaderCopy1,
+        allDatoCmsBadgesPotinCopy1,
     } = data;
 
     const [changeLanguage, setLanguage] = useState(false);
@@ -68,10 +75,10 @@ const IndexPage = ({ data }) => {
                         </Link>
                     </div>
                 </button>
-                <div className=" -mt-8 w-full -z-20">
+                <div className="relative -mt-8 w-full -z-20">
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
-                        quality={90}
+                        quality={100}
                         src="../../assets/hero.png"
                         loading="eager"
                         placeholder="blurred"
@@ -79,7 +86,7 @@ const IndexPage = ({ data }) => {
                 </div>
 
                 <div className="absolute flex flex-col items-center justify-cente">
-                    {allDatoCmsHeroTitle.edges.map(({ node }) => (
+                    {allDatoCmsHeroTitleCopy1.edges.map(({ node }) => (
                         <h1 className="text-xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
                             {node.heroTitle}
                         </h1>
@@ -88,7 +95,7 @@ const IndexPage = ({ data }) => {
                         to="/"
                         className="mt-2 lg:mt-6 hover:bg-black transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
                     >
-                        Zobacz Więcej
+                        Zobacz Wiecej
                     </Link>
                 </div>
 
@@ -121,10 +128,10 @@ const IndexPage = ({ data }) => {
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
-                            O Nas
+                            About Us
                         </h2>
 
-                        {allDatoCmsAbout.edges.map(({ node }) => (
+                        {allDatoCmsAboutCopy1.edges.map(({ node }) => (
                             <p className="max-w-screen-md text-gray-500 w-[70%] md:text-lg text-center mx-auto">
                                 {node.aboutUs}
                             </p>
@@ -132,7 +139,7 @@ const IndexPage = ({ data }) => {
                     </div>
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
-                        {allDatoCmsAboutArticle.edges.map(({ node }) => (
+                        {allDatoCmsAboutArticleCopy1.edges.map(({ node }) => (
                             <div className="flex flex-col md:flex-row items-start gap-4 lg:gap-6">
                                 <Link
                                     to={node.slug}
@@ -155,7 +162,7 @@ const IndexPage = ({ data }) => {
 
                                     <h2 className="text-gray-800 w-[93%] lg:w-[70%] text-xl font-bold">
                                         <Link
-                                            to="/"
+                                            to={node.slug}
                                             className="hoverLink  active:text-gray-900 transition duration-100"
                                         >
                                             {node.header}
@@ -183,360 +190,254 @@ const IndexPage = ({ data }) => {
 
             <section className="bg-white py-6 sm:py-8 lg:py-12">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
-                        <div className="order-1">
-                            <div className="max-h-[35rem] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
-                                <StaticImage
-                                    src="https://images.unsplash.com/photo-1604092038795-ecd577310c83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                                    loading="lazy"
-                                    quality={100}
-                                    alt="by unsplash"
-                                    className="h-full w-full object-cover object-center"
-                                />
+                    {allDatoCmsInfoSectionCopy1.edges.map(({ node }) => (
+                        <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+                            <div className="order-1">
+                                <div className="max-h-[35rem] overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
+                                    <GatsbyImage
+                                        className="h-full w-full object-cover object-center"
+                                        loading="lazy"
+                                        image={getImage(
+                                            node.img.gatsbyImageData
+                                        )}
+                                        alt={node.img.alt}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="md:pt-8 ">
+                                <p className="text-center font-bold text-[#168585] md:text-left">
+                                    {node.smallHeader}
+                                </p>
+
+                                <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-left">
+                                    {node.header1}
+                                </h1>
+
+                                <p className="mb-6 text-gray-600 md:mb-8">
+                                    {node.description1}
+                                </p>
+
+                                <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
+                                    {node.header2}
+                                </h2>
+
+                                <p className=" text-gray-600 md:mb-8">
+                                    {node.description2}
+                                </p>
                             </div>
                         </div>
-
-                        <div className="md:pt-8 ">
-                            <p className="text-center font-bold text-[#168585] md:text-left">
-                                Who we are
-                            </p>
-
-                            <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 sm:text-3xl md:mb-6 md:text-left">
-                                Our competitive advantage
-                            </h1>
-
-                            <p className="mb-6 text-gray-600 md:mb-8">
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
-                                <br />
-                                <br />
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is or
-                                otherwise generated. It may be used to display a
-                                sample of fonts or generate text for testing.
-                                Filler text is dummy text which has no meaning
-                                however looks very similar to real text.
-                            </p>
-
-                            <h2 className="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">
-                                About us
-                            </h2>
-
-                            <p className=" text-gray-600 md:mb-8">
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing. Filler text is dummy text which has no
-                                meaning however looks very similar to real text.
-                            </p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
             <section className="pt-6 lg:pt-16">
                 <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-                    <div className="rounded-lg bg-gray-100 shadow-md px-4 py-6 md:py-8 lg:py-12">
-                        <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
-                            Introducing
-                        </p>
+                    {allDatoCmsAdvantageCopy1.edges.map(({ node }) => (
+                        <div className="rounded-lg bg-gray-100 shadow-md px-4 py-6 md:py-8 lg:py-12">
+                            <p className="mb-2 text-center font-semibold text-[#1d7cac] md:mb-3 lg:text-lg">
+                                {node.smallHeader}
+                            </p>
 
-                        <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-                            Revolutionary way to build the web
-                        </h2>
+                            <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+                                {node.header}
+                            </h2>
 
-                        <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-                            This is a section of some simple filler text, also
-                            known as placeholder text. It shares some
-                            characteristics of a real written text but is random
-                            or otherwise generated.
-                        </p>
-                        <div className="hidden w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
-                            <div className="mx-auto flex max-w-screen-lg items-center gap-8 p-8">
-                                <div className="grid w-2/3 grid-cols-2 gap-8">
-                                    <div className="group flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                                                />
-                                            </svg>
+                            <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
+                                {node.description}
+                            </p>
+                            <div className="w-full overflow-hidden rounded-lg border bg-gray-50 shadow-sm lg:block max-w-screen-xl mx-auto mt-4 xl:mt-8">
+                                <div className="mx-auto flex flex-col lg:flex-row max-w-screen-lg items-center gap-8 p-8">
+                                    <div className="grid w-2/3 grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx1}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx1}
+                                                </p>
+                                            </div>
                                         </div>
 
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Growth
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                                    />
+                                                </svg>
                                             </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx2}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx2}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx3}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx3}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="group flex-col md:flex-row flex gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-5 w-5"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                                </svg>
+                                            </div>
+
+                                            <div>
+                                                <div className="mb-1 font-semibold">
+                                                    {node.pointx4}
+                                                </div>
+                                                <p className="text-sm text-gray-500">
+                                                    {node.descriptionPointx4}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div className="group flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                                                />
-                                            </svg>
+                                    <div className="w-full sm:w-1/2 lg:w-1/3 overflow-hidden rounded-lg border">
+                                        <div className="h-48 bg-gray-100">
+                                            <GatsbyImage
+                                                className="h-full w-full object-cover object-center"
+                                                loading="lazy"
+                                                image={getImage(
+                                                    node.img.gatsbyImageData
+                                                )}
+                                                alt={node.img.alt}
+                                            />
                                         </div>
-
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Security
-                                            </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="group flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                                                />
-                                            </svg>
-                                        </div>
-
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Cloud
-                                            </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="group flex gap-4">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1d7cac] text-white shadow-lg transition duration-100 group-active:bg-[#168585] md:h-12 md:w-12">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-5 w-5"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
-                                            >
-                                                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-                                            </svg>
-                                        </div>
-
-                                        <div>
-                                            <div className="mb-1 font-semibold">
-                                                Analytics
-                                            </div>
-                                            <p className="text-sm text-gray-500">
-                                                This is a section of some simple
-                                                filler text, also known as
-                                                placeholder text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="w-1/3 overflow-hidden rounded-lg border">
-                                    <div className="h-48 bg-gray-100">
-                                        <img
-                                            src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
-                                            loading="lazy"
-                                            alt="seovileo"
-                                            className="h-full w-full object-cover object-center"
-                                        />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
             <section className="max-w-screen-xl mt-12 px-6 lg:px-12 mx-auto">
                 <div className="lg:mb-20 text-gray-800 text-center lg:text-left">
-                    <h2 className="text-3xl font-bold mb-12 text-center">
-                        Projects we are proud of Xyz
-                    </h2>
+                    {allDatoCmsProjectHeaderCopy1.edges.map(({ node }) => (
+                        <h2 className="text-3xl font-bold mb-12 text-center">
+                            {node.header}
+                        </h2>
+                    ))}
 
-                    <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
-                        <div
-                            className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
-                        >
-                            <div className="relative overflow-hidden bg-no-repeat bg-cover">
-                                <StaticImage
-                                    alt="bla bla"
-                                    src="https://images.unsplash.com/photo-1530512878321-60525c2283bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
-                                    className="w-full rounded-t-lg h-52"
-                                />
-                                <Link to="/">
-                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
-                                </Link>
-                                <svg
-                                    className="absolute"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 1440 320"
-                                >
-                                    <path
-                                        fill="#fff"
-                                        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div className="p-6">
-                                <h5 className="font-bold text-lg mb-3">
-                                    Nostalgic waves
-                                </h5>
-                                <p className="mb-4 pb-2">
-                                    Ut pretium ultricies dignissim. Sed sit amet
-                                    mi eget urna placerat vulputate. Ut
-                                    vulputate est non quam dignissim elementum.
-                                    Donec a ullamcorper diam.
-                                </p>
-                                <Link
-                                    to="/"
-                                    data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light"
-                                    className="btn"
-                                >
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
+                    <div
+                        id="projects"
+                        className="grid scroll-m-20 lg:grid-cols-3 gap-x-6 lg:gap-x-12"
+                    >
+                        {allDatoCmsProjectArticleCopy1.edges.map(({ node }) => (
                             <div
-                                className="relative overflow-hidden bg-no-repeat bg-cover"
+                                className="bg-white block group rounded-lg  shadow-lg mb-6 lg:mb-0"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                             >
-                                <StaticImage
-                                    alt="blabla"
-                                    src="https://images.unsplash.com/photo-1533841158507-cf3a93f3cd74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-                                    className="w-full rounded-t-lg h-52"
-                                />
-                                <Link to="/">
-                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
-                                </Link>
-                                <svg
-                                    className="absolute"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 1440 320"
-                                >
-                                    <path
-                                        fill="#fff"
-                                        d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                                    ></path>
-                                </svg>
+                                <div className="relative overflow-hidden bg-no-repeat bg-cover">
+                                    <GatsbyImage
+                                        className="w-full rounded-t-lg h-52"
+                                        loading="lazy"
+                                        image={getImage(
+                                            node.img.gatsbyImageData
+                                        )}
+                                        alt={node.img.alt}
+                                    />
+                                    <Link to={node.slug}>
+                                        <div className="absolute group-hover:translate-y-0 flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed group-hover:opacity-100 translate-y-full transition duration-300 ease-in-out bg-gradient-to-tr from-black to-gray-800/70">
+                                            <p className="text-white font-bold tracking-widest">
+                                                {node.header}
+                                            </p>
+                                        </div>
+                                    </Link>
+                                    <svg
+                                        className="absolute"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 1440 320"
+                                    >
+                                        <path
+                                            fill="#fff"
+                                            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="font-bold text-lg mb-3">
+                                        {node.header}
+                                    </h3>
+                                    <p className="mb-4 pb-2">
+                                        {node.description}
+                                    </p>
+                                    <Link
+                                        to={node.slug}
+                                        data-mdb-ripple="true"
+                                        data-mdb-ripple-color="light"
+                                        className="btn"
+                                    >
+                                        Szczegóły
+                                    </Link>
+                                </div>
                             </div>
-                            <div className="p-6">
-                                <h5 className="font-bold text-lg mb-3">
-                                    Winter wildlife
-                                </h5>
-                                <p className="mb-4 pb-2">
-                                    Suspendisse in volutpat massa. Nulla
-                                    facilisi. Sed aliquet diam orci, nec ornare
-                                    metus semper sed. Integer volutpat ornare
-                                    erat sit amet rutrum.
-                                </p>
-                                <Link
-                                    to="/"
-                                    data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light"
-                                    className="btn"
-                                >
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="bg-white block rounded-lg shadow-lg">
-                            <div
-                                className="relative overflow-hidden bg-no-repeat bg-cover"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                            >
-                                <StaticImage
-                                    alt="blablaaa"
-                                    src="https://images.unsplash.com/photo-1523121297868-a27703f88158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-                                    className="w-full rounded-t-lg h-52"
-                                />
-                                <Link to="/">
-                                    <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
-                                </Link>
-                                <svg
-                                    className="absolute"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 1440 320"
-                                >
-                                    <path
-                                        fill="#fff"
-                                        d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div className="p-6">
-                                <h5 className="font-bold text-lg mb-3">
-                                    Camping travel
-                                </h5>
-                                <p className="mb-4 pb-2">
-                                    Curabitur tristique, mi a mollis sagittis,
-                                    metus felis mattis arcu, non vehicula nisl
-                                    dui quis diam. Mauris ut risus eget massa
-                                    volutpat feugiat.
-                                </p>
-                                <Link
-                                    to="/"
-                                    data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light"
-                                    className="btn"
-                                >
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -548,17 +449,17 @@ const IndexPage = ({ data }) => {
                 <div className="max-w-screen-lg px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
-                            Choose a Plan
+                            Wybierz Plan
                         </h2>
 
-                        {allDatoCmsChooseAPlan.edges.map(({ node }) => (
+                        {allDatoCmsChooseAPlanCopy1.edges.map(({ node }) => (
                             <p className="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">
                                 {node.chooseAPlan}
                             </p>
                         ))}
                     </div>
 
-                    {allDatoCmsPlanCard.edges.map(({ node }) => (
+                    {allDatoCmsPlanCardCopy1.edges.map(({ node }) => (
                         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-0">
                             <div className="w-full sm:w-1/2 lg:w-1/3 bg-gray-800 rounded-lg sm:rounded-r-none p-6 sm:p-8">
                                 <div className="mb-4">
@@ -633,10 +534,10 @@ const IndexPage = ({ data }) => {
                                 </ul>
 
                                 <Link
-                                    to="/"
+                                    to="/pl/#contact"
                                     className="block bg-gray-500 hover:bg-gray-600 focus-visible:ring ring-indigo-300 text-gray-100 active:text-gray-300 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                                 >
-                                    Get the {node.title2}
+                                    Kontakt {node.title2}
                                 </Link>
                             </div>
 
@@ -753,10 +654,10 @@ const IndexPage = ({ data }) => {
                                 </ul>
 
                                 <Link
-                                    to="/"
+                                    to="/pl/#contact"
                                     className="block bg-indigo-200 bg-opacity-50 hover:bg-[#27b5b9] active:bg-[#168585] focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                                 >
-                                    Get the {node.title}
+                                    Kontakt {node.title}
                                 </Link>
                             </div>
                         </div>
@@ -767,7 +668,7 @@ const IndexPage = ({ data }) => {
             <section className="max-w-screen-xl my-6 md:my-24 px-3 mx-auto">
                 <section className="text-gray-800">
                     <div className="block rounded-lg bg-white">
-                        {allDatoCmsArticle.edges.map(({ node }) => (
+                        {allDatoCmsArticleCopy1.edges.map(({ node }) => (
                             <div className="flex flex-wrap items-center">
                                 <div className="relative grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12">
                                     <GatsbyImage
@@ -885,13 +786,13 @@ const IndexPage = ({ data }) => {
                                             </div>
                                         </div>
                                         <Link
-                                            to="/#contact"
+                                            to="/pl/#contact"
                                             type="button"
                                             className="btn w-full md:w-auto"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
-                                            Contact Now
+                                            Napisz Do Nas
                                         </Link>
                                     </div>
                                 </div>
@@ -902,175 +803,81 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section className="relative h-96 overflow-hidden max-w-[2000px] flex flex-col items-center justify-center">
-                <div className="absolute w-full h-full bg-gray-900/90 top-0 left-0 z-20" />
+                <div className="absolute w-full h-full bg-gradient-to-t from-black/90 to-gray-800/90 top-0 left-0 z-20" />
                 <StaticImage
-                    quality={80}
+                    quality={60}
                     src="https://images.unsplash.com/photo-1486149266845-b44cb2835667?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                     className="w-full h-full "
                 />
-                <div className="text-white absolute w-full z-30 text-center">
-                    <div class="container  px-12 py-24 mx-auto">
-                        <div class="flex flex-wrap -m-4 text-center">
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    2.7K
-                                </h2>
-                                <p class="leading-relaxed">Users</p>
-                            </div>
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    1.8K
-                                </h2>
-                                <p class="leading-relaxed">Subscribes</p>
-                            </div>
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    35
-                                </h2>
-                                <p class="leading-relaxed">Downloads</p>
-                            </div>
-                            <div class="p-4 sm:w-1/4 w-1/2">
-                                <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
-                                    4
-                                </h2>
-                                <p class="leading-relaxed">Products</p>
+                {allDatoCmsNumberSectionCopy1.edges.map(({ node }) => (
+                    <div className="text-white absolute w-full z-30 text-center">
+                        <div class="container  px-12 py-24 mx-auto">
+                            <div class="flex flex-wrap -m-4 text-center">
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        {node.number1}
+                                    </h2>
+                                    <p class="leading-relaxed">{node.word1}</p>
+                                </div>
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        {node.number2}
+                                    </h2>
+                                    <p class="leading-relaxed">{node.word2}</p>
+                                </div>
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        {node.number3}
+                                    </h2>
+                                    <p class="leading-relaxed">{node.word3}</p>
+                                </div>
+                                <div class="p-4 sm:w-1/4 w-1/2">
+                                    <h2 class="title-font font-medium lg:text-5xl sm:text-4xl text-3xl text-white">
+                                        {node.number4}
+                                    </h2>
+                                    <p class="leading-relaxed">{node.word4}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </section>
 
             <section className="text-gray-600 body-font">
                 <div className="container py-6 md:py-12 px-5 pt-10 mx-auto">
-                    <div className="text-center mb-6 lg:mb-20">
-                        <h1 className="sm:text-3xl text-2xl font-bold text-center title-font text-gray-900 mb-4">
-                            Raw Denim Heirloom Man Braid
-                        </h1>
-                        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-                            Blue bottle crucifix vinyl post-ironic four dollar
-                            toast vegan taxidermy. Gastropub indxgo juice
-                            poutine, ramps microdosing banh mi pug.
-                        </p>
-                    </div>
+                    {allDatoCmsBadgesHeaderCopy1.edges.map(({ node }) => (
+                        <div className="text-center mb-6 lg:mb-20">
+                            <h4 className="sm:text-3xl text-2xl font-bold text-center title-font text-gray-900 mb-4">
+                                {node.header}
+                            </h4>
+                            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+                                {node.description}
+                            </p>
+                        </div>
+                    ))}
+
                     <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-                        <div className="p-2 sm:w-1/2 w-full">
-                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="3"
-                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                    <path d="M22 4L12 14.01l-3-3"></path>
-                                </svg>
-                                <span className="title-font font-medium">
-                                    Authentic Cliche Forage
-                                </span>
+                        {allDatoCmsBadgesPotinCopy1.edges.map(({ node }) => (
+                            <div className="p-2 sm:w-1/2 w-full">
+                                <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                    <svg
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="3"
+                                        className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                        <path d="M22 4L12 14.01l-3-3"></path>
+                                    </svg>
+                                    <span className="title-font font-medium">
+                                        {node.smallDescription}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="p-2 sm:w-1/2 w-full">
-                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="3"
-                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                    <path d="M22 4L12 14.01l-3-3"></path>
-                                </svg>
-                                <span className="title-font font-medium">
-                                    Kinfolk Chips Snackwave
-                                </span>
-                            </div>
-                        </div>
-                        <div className="p-2 sm:w-1/2 w-full">
-                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="3"
-                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                    <path d="M22 4L12 14.01l-3-3"></path>
-                                </svg>
-                                <span className="title-font font-medium">
-                                    Coloring Book Ethical
-                                </span>
-                            </div>
-                        </div>
-                        <div className="p-2 sm:w-1/2 w-full">
-                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="3"
-                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                    <path d="M22 4L12 14.01l-3-3"></path>
-                                </svg>
-                                <span className="title-font font-medium">
-                                    Typewriter Polaroid Cray
-                                </span>
-                            </div>
-                        </div>
-                        <div className="p-2 sm:w-1/2 w-full">
-                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="3"
-                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                    <path d="M22 4L12 14.01l-3-3"></path>
-                                </svg>
-                                <span className="title-font font-medium">
-                                    Pack Truffaut Blue
-                                </span>
-                            </div>
-                        </div>
-                        <div className="p-2 sm:w-1/2 w-full">
-                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="3"
-                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                    <path d="M22 4L12 14.01l-3-3"></path>
-                                </svg>
-                                <span className="title-font font-medium">
-                                    The Catcher In The Rye
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center mt-6 mb-3">
-                        <button className=" btn mx-2">Button</button>
-                        <button className=" btn mx-2">Button</button>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -1090,7 +897,7 @@ const IndexPage = ({ data }) => {
                             marginheight="0"
                             marginwidth="0"
                             scrolling="no"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.803116818!2d21.061194099999998!3d52.23293795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1681215426441!5m2!1spl!2spl"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.3521304770245!2d-2.032411982954312!3d52.67323369185885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709fc4e084cc95%3A0x40b694cb9a80fb0!2sCannock%20WS11%200GS%2C%20Wielka%20Brytania!5e0!3m2!1spl!2spl!4v1681474121631!5m2!1spl!2spl"
                             style={{
                                 filter: "grayscale(1) contrast(1.2) opacity(0.6)",
                             }}
@@ -1098,34 +905,40 @@ const IndexPage = ({ data }) => {
                         <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
                             <div className="lg:w-1/2 px-6">
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
-                                    ADDRESS
+                                    ADRES
                                 </h2>
                                 <p className="mt-1">
-                                    Photo booth tattooed prism, portland taiyaki
-                                    hoodie neutra typewriter
+                                    Cannock, Staffordshire WS11 0GS, GB
                                 </p>
                             </div>
                             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                                     EMAIL
                                 </h2>
-                                <p className="text-[#168585] leading-relaxed">
-                                    example@email.com
-                                </p>
+                                <Link
+                                    to="mailto:cezary.lenart@cklfacades.com"
+                                    className="text-[#168585] leading-relaxed"
+                                >
+                                    cezary.lenart@cklfacades.com
+                                </Link>
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
-                                    PHONE
+                                    TEL
                                 </h2>
-                                <p className="leading-relaxed">123-456-7890</p>
+                                <Link
+                                    to="tel:+447546677411"
+                                    className="leading-relaxed"
+                                >
+                                    +447546677411
+                                </Link>
                             </div>
                         </div>
                     </div>
                     <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-2xl">
                         <h2 className="text-[#168585] font-bold text-lg mb-1 title-font">
-                            Feedback
+                            FORMULARZ
                         </h2>
                         <p className="leading-relaxed mb-5 text-gray-600">
-                            Post-ironic portland shabby chic echo park, banjo
-                            fashion axe
+                            Napisz do nas, odpowiemy w ciagu 24h
                         </p>
                         <div className="relative mb-2">
                             <label
@@ -1202,21 +1015,21 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
     query MyQuery {
-        allDatoCmsHeroTitle {
+        allDatoCmsHeroTitleCopy1 {
             edges {
                 node {
                     heroTitle
                 }
             }
         }
-        allDatoCmsAbout {
+        allDatoCmsAboutCopy1 {
             edges {
                 node {
                     aboutUs
                 }
             }
         }
-        allDatoCmsAboutArticle(limit: 4, sort: { date: DESC }) {
+        allDatoCmsAboutArticleCopy1(limit: 4, sort: { date: DESC }) {
             edges {
                 node {
                     slug
@@ -1230,14 +1043,102 @@ export const query = graphql`
                 }
             }
         }
-        allDatoCmsChooseAPlan {
+        allDatoCmsInfoSectionCopy1 {
+            edges {
+                node {
+                    description1
+                    description2
+                    header1
+                    header2
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    smallHeader
+                }
+            }
+        }
+        allDatoCmsAdvantageCopy1 {
+            edges {
+                node {
+                    description
+                    descriptionPointx1
+                    descriptionPointx2
+                    descriptionPointx3
+                    descriptionPointx4
+                    header
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    pointx1
+                    pointx2
+                    pointx3
+                    pointx4
+                    smallHeader
+                }
+            }
+        }
+        allDatoCmsProjectHeaderCopy1 {
+            edges {
+                node {
+                    header
+                }
+            }
+        }
+        allDatoCmsProjectArticleCopy1(
+            limit: 3
+            sort: { meta: { firstPublishedAt: DESC } }
+        ) {
+            edges {
+                node {
+                    description
+                    header
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    slug
+                }
+            }
+        }
+        allDatoCmsNumberSectionCopy1 {
+            edges {
+                node {
+                    number1
+                    number2
+                    number3
+                    number4
+                    word1
+                    word2
+                    word3
+                    word4
+                }
+            }
+        }
+        allDatoCmsBadgesHeaderCopy1 {
+            edges {
+                node {
+                    description
+                    header
+                }
+            }
+        }
+        allDatoCmsBadgesPotinCopy1(sort: { meta: { firstPublishedAt: DESC } }) {
+            edges {
+                node {
+                    smallDescription
+                }
+            }
+        }
+        allDatoCmsChooseAPlanCopy1 {
             edges {
                 node {
                     chooseAPlan
                 }
             }
         }
-        allDatoCmsPlanCard {
+        allDatoCmsPlanCardCopy1 {
             edges {
                 node {
                     pointc1
@@ -1260,7 +1161,7 @@ export const query = graphql`
                 }
             }
         }
-        allDatoCmsArticle {
+        allDatoCmsArticleCopy1 {
             edges {
                 node {
                     description
@@ -1281,6 +1182,6 @@ export const query = graphql`
     }
 `;
 
-export const Head = () => <Seo title="CKL Facades" />;
+export const Head = () => <Seo titlePL="CKL Facades" />;
 
 export default IndexPage;

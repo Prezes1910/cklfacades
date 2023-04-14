@@ -47,4 +47,48 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         });
     });
+    const quaryArticlesPL = await graphql(`
+        {
+            allDatoCmsAboutArticleCopy1 {
+                nodes {
+                    slug
+                }
+            }
+        }
+    `);
+    const queryProjectsPL = await graphql(`
+        {
+            allDatoCmsProjectArticleCopy1 {
+                nodes {
+                    slug
+                }
+            }
+        }
+    `);
+
+    const articleTemplatePL = path.resolve(`./src/templates/articlePL.js`);
+
+    quaryArticlesPL.data.allDatoCmsAboutArticleCopy1.nodes.forEach((node) => {
+        const { slug } = node;
+        createPage({
+            path:`/pl/` + slug,
+            component: articleTemplatePL,
+            context: {
+                slug,
+            },
+        });
+    });
+
+    const projectTemplatePL = path.resolve(`./src/templates/projectPL.js`);
+
+    queryProjectsPL.data.allDatoCmsProjectArticleCopy1.nodes.forEach((node) => {
+        const { slug } = node;
+        createPage({
+            path:`/pl/` + slug,
+            component: projectTemplatePL,
+            context: {
+                slug,
+            },
+        });
+    });
 };

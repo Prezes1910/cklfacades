@@ -1,7 +1,7 @@
 import * as React from "react";
-import Layout from "../../components/pl/layoutPL";
+import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import Seo from "../../components/pl/seoPL";
+import Seo from "../components/seo";
 import { Link } from "gatsby";
 
 const NotFoundPage = () => (
@@ -11,7 +11,7 @@ const NotFoundPage = () => (
                 <StaticImage
                     className=" object-bottom w-[220%] md:w-full"
                     quality={100}
-                    src="../../assets/hero.png"
+                    src="../assets/hero.png"
                     placeholder="blurred"
                 />
             </div>
@@ -24,24 +24,15 @@ const NotFoundPage = () => (
                 data-sal-easing="ease"
                 className="text-3xl text-black"
             >
-                Coś poszło nie tak
+                Coming Soon
             </h1>
-            <p
-                data-sal="slide-up"
-                data-sal-delay="200"
-                data-sal-duration="600"
-                data-sal-easing="ease"
-                className="text-3xl text-black mb-10"
-            >
-                Bład 404 :(
-            </p>
             <Link to="/pl" className="btn text-end">
-                Powrót
+                Back
             </Link>
         </section>
     </Layout>
 );
 
-export const Head = () => <Seo titlePL="Upss 404: Bład Ładowania Strony" />;
+export const Head = () => <Seo title="Projects" />;
 
 export default NotFoundPage;

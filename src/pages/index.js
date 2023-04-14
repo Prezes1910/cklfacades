@@ -358,11 +358,13 @@ const IndexPage = ({ data }) => {
 
                                     <div className="w-full sm:w-1/2 lg:w-1/3 overflow-hidden rounded-lg border">
                                         <div className="h-48 bg-gray-100">
-                                            <img
-                                                src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320"
-                                                loading="lazy"
-                                                alt="seovileo"
+                                            <GatsbyImage
                                                 className="h-full w-full object-cover object-center"
+                                                loading="lazy"
+                                                image={getImage(
+                                                    node.img.gatsbyImageData
+                                                )}
+                                                alt={node.img.alt}
                                             />
                                         </div>
                                     </div>
@@ -381,7 +383,10 @@ const IndexPage = ({ data }) => {
                         </h2>
                     ))}
 
-                    <div id="projects" className="grid scroll-m-20 lg:grid-cols-3 gap-x-6 lg:gap-x-12">
+                    <div
+                        id="projects"
+                        className="grid scroll-m-20 lg:grid-cols-3 gap-x-6 lg:gap-x-12"
+                    >
                         {allDatoCmsProjectArticle.edges.map(({ node }) => (
                             <div
                                 className="bg-white block group rounded-lg  shadow-lg mb-6 lg:mb-0"
@@ -910,23 +915,30 @@ const IndexPage = ({ data }) => {
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                                     EMAIL
                                 </h2>
-                                <Link to="mailto:cezary.lenart@cklfacades.com" className="text-[#168585] leading-relaxed">
+                                <Link
+                                    to="mailto:cezary.lenart@cklfacades.com"
+                                    className="text-[#168585] leading-relaxed"
+                                >
                                     cezary.lenart@cklfacades.com
                                 </Link>
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                                     PHONE
                                 </h2>
-                                <Link to="tel:+447546677411" className="leading-relaxed">+447546677411</Link>
+                                <Link
+                                    to="tel:+447546677411"
+                                    className="leading-relaxed"
+                                >
+                                    +447546677411
+                                </Link>
                             </div>
                         </div>
                     </div>
                     <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-2xl">
                         <h2 className="text-[#168585] font-bold text-lg mb-1 title-font">
-                            Feedback
+                        Form
                         </h2>
                         <p className="leading-relaxed mb-5 text-gray-600">
-                            Post-ironic portland shabby chic echo park, banjo
-                            fashion axe
+                            Write to us, we will reply within 24 hours
                         </p>
                         <div className="relative mb-2">
                             <label

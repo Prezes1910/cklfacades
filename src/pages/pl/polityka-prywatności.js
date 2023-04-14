@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../../components/pl/seoPL";
 import { Link } from "gatsby";
 
-const NotFoundPage = () => (
+const Prywatności = () => (
     <Layout>
         <section className="relative object-bottom flex items-center min-h-[16rem] overflow-hidden h-24 justify-center w-full">
             <div className="w-full -mt-4 -z-20">
@@ -24,17 +24,8 @@ const NotFoundPage = () => (
                 data-sal-easing="ease"
                 className="text-3xl text-black"
             >
-                Coś poszło nie tak
+                Zapraszamy Wkrótce
             </h1>
-            <p
-                data-sal="slide-up"
-                data-sal-delay="200"
-                data-sal-duration="600"
-                data-sal-easing="ease"
-                className="text-3xl text-black mb-10"
-            >
-                Bład 404 :(
-            </p>
             <Link to="/pl" className="btn text-end">
                 Powrót
             </Link>
@@ -42,6 +33,6 @@ const NotFoundPage = () => (
     </Layout>
 );
 
-export const Head = () => <Seo titlePL="Upss 404: Bład Ładowania Strony" />;
+export const Head = () => <Seo titlePL="Polityka Prywatności" />;
 
-export default NotFoundPage;
+export default Prywatności;

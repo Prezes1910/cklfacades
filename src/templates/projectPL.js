@@ -1,13 +1,13 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Layout from "../components/pl/layoutPL";
+import Seo from "../components/pl/seoPL";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 
-const ProjectTemplate = ({
+const ProjectTemplatePL = ({
     pageContext: { slug },
-    data: { datoCmsProjectArticle },
+    data: { datoCmsProjectArticleCopy1 },
 }) => {
     return (
         <Layout>
@@ -16,9 +16,9 @@ const ProjectTemplate = ({
                     <GatsbyImage
                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
                         image={getImage(
-                            datoCmsProjectArticle.img.gatsbyImageData
+                            datoCmsProjectArticleCopy1.img.gatsbyImageData
                         )}
-                        alt={datoCmsProjectArticle.img.alt}
+                        alt={datoCmsProjectArticleCopy1.img.alt}
                     />
                     <div className="w-full h-full bg-gray-900/70 absolute top-0 left-0" />
                 </div>
@@ -32,40 +32,40 @@ const ProjectTemplate = ({
                                 <GatsbyImage
                                     className="h-80 w-80 md:h-96 md:w-96 lg:p-72 rounded-lg shadow-lg"
                                     image={getImage(
-                                        datoCmsProjectArticle.img
+                                        datoCmsProjectArticleCopy1.img
                                             .gatsbyImageData
                                     )}
-                                    alt={datoCmsProjectArticle.img.alt}
+                                    alt={datoCmsProjectArticleCopy1.img.alt}
                                 />
                             </div>
                             <div class="mb-12 lg:mb-0">
                                 <div class="block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14">
                                     <h1 class="text-3xl font-bold mb-6 pb-2">
-                                        {datoCmsProjectArticle.header}
+                                        {datoCmsProjectArticleCopy1.header}
                                     </h1>
                                     <p class="text-gray-500 mb-6 pb-2">
                                         {
-                                            datoCmsProjectArticle.detailedDescription
+                                            datoCmsProjectArticleCopy1.detailedDescription
                                         }
                                     </p>
 
                                     <Link
-                                        to="/#about"
+                                        to="/pl/#about"
                                         type="button"
                                         class="inline-block mb-4 px-7 mr-4 py-3 bg-gray-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
                                         data-mdb-ripple="true"
                                         data-mdb-ripple-color="light"
                                     >
-                                        Back
+                                        Powrót
                                     </Link>
                                     <Link
-                                        to="/#contact"
+                                        to="/pl/#contact"
                                         type="button"
                                         class="inline-block px-7 py-3 bg-gray-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
                                         data-mdb-ripple="true"
                                         data-mdb-ripple-color="light"
                                     >
-                                        Contact
+                                        Kontact
                                     </Link>
                                 </div>
                             </div>
@@ -77,13 +77,13 @@ const ProjectTemplate = ({
     );
 };
 
-export const Head = () => <Seo title="Facades Project" />;
+export const Head = () => <Seo titlePL="Facades Projekt" />;
 
-export default ProjectTemplate;
+export default ProjectTemplatePL;
 
 export const query = graphql`
     query MyQuery($slug: String) {
-        datoCmsProjectArticle(slug: { eq: $slug }) {
+        datoCmsProjectArticleCopy1(slug: { eq: $slug }) {
             description
             detailedDescription
             header
