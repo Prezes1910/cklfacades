@@ -37,6 +37,7 @@ const IndexPage = ({ data }) => {
                     <StaticImage
                         height={20}
                         width={20}
+                        alt="uk"
                         placeholder="blurred"
                         src="../assets/language/uk.png"
                     />
@@ -55,6 +56,7 @@ const IndexPage = ({ data }) => {
                                 height={12}
                                 width={12}
                                 layout="fixed"
+                                alt="uk"
                                 placeholder="blurred"
                                 src="../assets/language/uk.png"
                             />
@@ -69,6 +71,7 @@ const IndexPage = ({ data }) => {
                                 width={12}
                                 layout="fixed"
                                 placeholder="blurred"
+                                alt="poland"
                                 src="../assets/language/poland.png"
                             />
                             <p className="ml-2">Polish</p>
@@ -81,6 +84,7 @@ const IndexPage = ({ data }) => {
                         quality={100}
                         src="../assets/hero.png"
                         loading="eager"
+                        alt="Facades project"
                         placeholder="blurred"
                     />
                 </div>
@@ -151,7 +155,7 @@ const IndexPage = ({ data }) => {
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt}
+                                        alt={node.img.alt || "Facades"}
                                     />
                                 </Link>
 
@@ -200,7 +204,7 @@ const IndexPage = ({ data }) => {
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt}
+                                        alt={node.img.alt || "Facades"}
                                     />
                                 </div>
                             </div>
@@ -364,7 +368,7 @@ const IndexPage = ({ data }) => {
                                                 image={getImage(
                                                     node.img.gatsbyImageData
                                                 )}
-                                                alt={node.img.alt}
+                                                alt={node.img.alt || "Facades"}
                                             />
                                         </div>
                                     </div>
@@ -400,7 +404,7 @@ const IndexPage = ({ data }) => {
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt}
+                                        alt={node.img.alt || "Facades"}
                                     />
                                     <Link to={node.slug}>
                                         <div className="absolute group-hover:translate-y-0 flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed group-hover:opacity-100 translate-y-full transition duration-300 ease-in-out bg-gradient-to-tr from-black to-gray-800/70">
@@ -676,7 +680,7 @@ const IndexPage = ({ data }) => {
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt}
+                                        alt={node.img.alt || "Facades"}
                                     />
                                 </div>
                                 <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
@@ -807,6 +811,7 @@ const IndexPage = ({ data }) => {
                 <StaticImage
                     quality={60}
                     src="https://images.unsplash.com/photo-1486149266845-b44cb2835667?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    alt="Facades Project"
                     className="w-full h-full "
                 />
                 {allDatoCmsNumberSection.edges.map(({ node }) => (
