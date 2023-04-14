@@ -3,28 +3,28 @@ const path = require("path");
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
-    const queryResults = await graphql(`
+    const quaryArticles = await graphql(`
         {
             allDatoCmsAboutArticle {
                 nodes {
                     slug
-                    header
-                    description
-                    img {
-                        gatsbyImageData
-                        alt
-                    }
-                    date
                 }
             }
         }
     `);
-    {
-    }
+    const queryProjects = await graphql(`
+        {
+            allDatoCmsProjectArticle {
+                nodes {
+                    slug
+                }
+            }
+        }
+    `);
 
     const articleTemplate = path.resolve(`./src/templates/article.js`);
 
-    queryResults.data.allDatoCmsAboutArticle.nodes.forEach((node) => {
+    quaryArticles.data.allDatoCmsAboutArticle.nodes.forEach((node) => {
         const { slug } = node;
         createPage({
             path: slug,
@@ -34,5 +34,17 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         });
     });
-};
 
+    const projectTemplate = path.resolve(`./src/templates/project.js`);
+
+    queryProjects.data.allDatoCmsProjectArticle.nodes.forEach((node) => {
+        const { slug } = node;
+        createPage({
+            path: slug,
+            component: projectTemplate,
+            context: {
+                slug,
+            },
+        });
+    });
+};

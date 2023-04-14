@@ -381,7 +381,7 @@ const IndexPage = ({ data }) => {
                         </h2>
                     ))}
 
-                    <div className="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
+                    <div id="projects" className="grid scroll-m-20 lg:grid-cols-3 gap-x-6 lg:gap-x-12">
                         {allDatoCmsProjectArticle.edges.map(({ node }) => (
                             <div
                                 className="bg-white block group rounded-lg  shadow-lg mb-6 lg:mb-0"
@@ -529,10 +529,10 @@ const IndexPage = ({ data }) => {
                                 </ul>
 
                                 <Link
-                                    to="/"
+                                    to="/#contact"
                                     className="block bg-gray-500 hover:bg-gray-600 focus-visible:ring ring-indigo-300 text-gray-100 active:text-gray-300 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                                 >
-                                    Get the {node.title2}
+                                    Contact for {node.title2}
                                 </Link>
                             </div>
 
@@ -649,10 +649,10 @@ const IndexPage = ({ data }) => {
                                 </ul>
 
                                 <Link
-                                    to="/"
+                                    to="/#contact"
                                     className="block bg-indigo-200 bg-opacity-50 hover:bg-[#27b5b9] active:bg-[#168585] focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                                 >
-                                    Get the {node.title}
+                                    Contact for {node.title}
                                 </Link>
                             </div>
                         </div>
@@ -903,21 +903,20 @@ const IndexPage = ({ data }) => {
                                     ADDRESS
                                 </h2>
                                 <p className="mt-1">
-                                    Photo booth tattooed prism, portland taiyaki
-                                    hoodie neutra typewriter
+                                    Cannock, Staffordshire WS11 0GS, GB
                                 </p>
                             </div>
                             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                                     EMAIL
                                 </h2>
-                                <p className="text-[#168585] leading-relaxed">
-                                    example@email.com
-                                </p>
+                                <Link to="mailto:cezary.lenart@cklfacades.com" className="text-[#168585] leading-relaxed">
+                                    cezary.lenart@cklfacades.com
+                                </Link>
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                                     PHONE
                                 </h2>
-                                <p className="leading-relaxed">+447546677411</p>
+                                <Link to="tel:+447546677411" className="leading-relaxed">+447546677411</Link>
                             </div>
                         </div>
                     </div>
