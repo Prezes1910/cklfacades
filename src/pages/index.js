@@ -75,10 +75,10 @@ const IndexPage = ({ data }) => {
                         </Link>
                     </div>
                 </button>
-                <div className=" -mt-8 w-full -z-20">
+                <div className="relative -mt-8 w-full -z-20">
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
-                        quality={90}
+                        quality={100}
                         src="../assets/hero.png"
                         loading="eager"
                         placeholder="blurred"
@@ -398,7 +398,7 @@ const IndexPage = ({ data }) => {
                                         alt={node.img.alt}
                                     />
                                     <Link to={node.slug}>
-                                        <div className="absolute group-hover:translate-y-0 flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed group-hover:opacity-100 translate-y-full transition duration-300 ease-in-out bg-gray-700/90">
+                                        <div className="absolute group-hover:translate-y-0 flex items-center justify-center top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed group-hover:opacity-100 translate-y-full transition duration-300 ease-in-out bg-gradient-to-tr from-black to-gray-800/70">
                                             <p className="text-white font-bold tracking-widest">
                                                 {node.header}
                                             </p>
@@ -798,7 +798,7 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section className="relative h-96 overflow-hidden max-w-[2000px] flex flex-col items-center justify-center">
-                <div className="absolute w-full h-full bg-gray-900/90 top-0 left-0 z-20" />
+                <div className="absolute w-full h-full bg-gradient-to-t from-black/90 to-gray-800/90 top-0 left-0 z-20" />
                 <StaticImage
                     quality={60}
                     src="https://images.unsplash.com/photo-1486149266845-b44cb2835667?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -850,34 +850,29 @@ const IndexPage = ({ data }) => {
                             </p>
                         </div>
                     ))}
-                    
+
                     <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-                    {allDatoCmsBadgesPotin.edges.map(({ node }) => (
-                        <div className="p-2 sm:w-1/2 w-full">
-                            <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="3"
-                                    className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                    <path d="M22 4L12 14.01l-3-3"></path>
-                                </svg>
-                                <span className="title-font font-medium">
-                                    {node.smallDescription}
-                                </span>
+                        {allDatoCmsBadgesPotin.edges.map(({ node }) => (
+                            <div className="p-2 sm:w-1/2 w-full">
+                                <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+                                    <svg
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="3"
+                                        className="text-[#27b5b9] w-6 h-6 flex-shrink-0 mr-4"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                        <path d="M22 4L12 14.01l-3-3"></path>
+                                    </svg>
+                                    <span className="title-font font-medium">
+                                        {node.smallDescription}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        
-                    ))}
-                    </div>
-                    <div className="flex items-center justify-center mt-6 mb-3">
-                        <button className=" btn mx-2">Button</button>
-                        <button className=" btn mx-2">Button</button>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -897,7 +892,7 @@ const IndexPage = ({ data }) => {
                             marginheight="0"
                             marginwidth="0"
                             scrolling="no"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.803116818!2d21.061194099999998!3d52.23293795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1681215426441!5m2!1spl!2spl"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.3521304770245!2d-2.032411982954312!3d52.67323369185885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709fc4e084cc95%3A0x40b694cb9a80fb0!2sCannock%20WS11%200GS%2C%20Wielka%20Brytania!5e0!3m2!1spl!2spl!4v1681474121631!5m2!1spl!2spl"
                             style={{
                                 filter: "grayscale(1) contrast(1.2) opacity(0.6)",
                             }}
@@ -922,7 +917,7 @@ const IndexPage = ({ data }) => {
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                                     PHONE
                                 </h2>
-                                <p className="leading-relaxed">123-456-7890</p>
+                                <p className="leading-relaxed">+447546677411</p>
                             </div>
                         </div>
                     </div>
