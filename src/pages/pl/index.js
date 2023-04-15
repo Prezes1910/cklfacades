@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
                         </h1>
                     ))}
                     <Link
-                        to="/pl/o-nas"
+                        to="/pl/o-facades"
                         className="mt-2 lg:mt-6 hover:bg-black transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
                     >
                         Zobacz Wiecej
