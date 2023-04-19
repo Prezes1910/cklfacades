@@ -18,6 +18,7 @@ const IndexPage = ({ data }) => {
         allDatoCmsChooseAPlan,
         allDatoCmsPlanCard,
         allDatoCmsArticle,
+        allDatoCmsArticlePoint,
         allDatoCmsNumberSection,
         allDatoCmsBadgesHeader,
         allDatoCmsBadgesPotin,
@@ -91,7 +92,7 @@ const IndexPage = ({ data }) => {
 
                 <div className="absolute flex flex-col items-center justify-cente">
                     {allDatoCmsHeroTitle.edges.map(({ node }) => (
-                        <h1 className="text-xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[70%] px-6">
+                        <h1 className="text-2xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[70%] px-6">
                             {node.heroTitle}
                         </h1>
                     ))}
@@ -380,7 +381,7 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section className="max-w-screen-xl mt-12 px-6 lg:px-12 mx-auto">
-                <div className="lg:mb-20 text-gray-800 text-center lg:text-left">
+                <div className="lg:mb-12 text-gray-800 text-center lg:text-left">
                     {allDatoCmsProjectHeader.edges.map(({ node }) => (
                         <h2 className="text-3xl font-bold mb-12 text-center">
                             {node.header}
@@ -446,10 +447,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section
-                id="services"
-                className="bg-white py-6 sm:py-8 lg:py-16 mt-8 sm:mt-12 lg:mt-24"
-            >
+            {/* <section className="bg-white py-6 sm:py-8 lg:py-16 mt-8 sm:mt-12 lg:mt-24">
                 <div className="max-w-screen-lg px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -667,16 +665,19 @@ const IndexPage = ({ data }) => {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
 
-            <section className="max-w-screen-xl my-6 md:my-24 px-3 mx-auto">
-                <section className="text-gray-800">
+            <section
+                id="services"
+                className=" scroll-m-4 md:scroll-m-6 bg-zinc-50 py-6 md:py-24 px-3"
+            >
+                <section className="text-gray-800 max-w-screen-xl mx-auto shadow-lg">
                     <div className="block rounded-lg bg-white">
                         {allDatoCmsArticle.edges.map(({ node }) => (
                             <div className="flex flex-wrap items-center">
                                 <div className="relative grow-0 shrink-0 basis-auto block w-full lg:flex lg:w-6/12 xl:w-4/12">
                                     <GatsbyImage
-                                        className="lg:w-full sm:max-h-[10rem] lg:max-h-[44rem] rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+                                        className="lg:w-full max-h-96 sm:max-h-[10rem] lg:max-h-[44rem] rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
@@ -692,102 +693,26 @@ const IndexPage = ({ data }) => {
                                             {node.description}
                                         </p>
                                         <div className="flex flex-wrap mb-6">
-                                            <div className="w-full lg:w-6/12 xl:w-4/12 mb-4">
-                                                <p className="flex items-center">
-                                                    <svg
-                                                        className="w-4 h-4 mr-2 text-green-600"
-                                                        role="img"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512"
-                                                    >
-                                                        <path
-                                                            fill="currentColor"
-                                                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
-                                                        ></path>
-                                                    </svg>
-                                                    {node.pointx1}
-                                                </p>
-                                            </div>
-                                            <div className="w-full lg:w-6/12 xl:w-4/12 mb-4">
-                                                <p className="flex items-center">
-                                                    <svg
-                                                        className="w-4 h-4 mr-2 text-green-600"
-                                                        role="img"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512"
-                                                    >
-                                                        <path
-                                                            fill="currentColor"
-                                                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
-                                                        ></path>
-                                                    </svg>
-                                                    {node.pointx2}
-                                                </p>
-                                            </div>
-                                            <div className="w-full lg:w-6/12 xl:w-4/12 mb-4">
-                                                <p className="flex items-center">
-                                                    <svg
-                                                        className="w-4 h-4 mr-2 text-green-600"
-                                                        role="img"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512"
-                                                    >
-                                                        <path
-                                                            fill="currentColor"
-                                                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
-                                                        ></path>
-                                                    </svg>
-                                                    {node.pointx3}
-                                                </p>
-                                            </div>
-                                            <div className="w-full lg:w-6/12 xl:w-4/12 mb-4">
-                                                <p className="flex items-center">
-                                                    <svg
-                                                        className="w-4 h-4 mr-2 text-green-600"
-                                                        role="img"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512"
-                                                    >
-                                                        <path
-                                                            fill="currentColor"
-                                                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
-                                                        ></path>
-                                                    </svg>
-                                                    {node.pointx4}
-                                                </p>
-                                            </div>
-                                            <div className="w-full lg:w-6/12 xl:w-4/12 mb-4">
-                                                <p className="flex items-center">
-                                                    <svg
-                                                        className="w-4 h-4 mr-2 text-green-600"
-                                                        role="img"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512"
-                                                    >
-                                                        <path
-                                                            fill="currentColor"
-                                                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
-                                                        ></path>
-                                                    </svg>
-                                                    {node.pointx5}
-                                                </p>
-                                            </div>
-                                            <div className="w-full lg:w-6/12 xl:w-4/12 mb-4">
-                                                <p className="flex items-center">
-                                                    <svg
-                                                        className="w-4 h-4 mr-2 text-green-600"
-                                                        role="img"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512"
-                                                    >
-                                                        <path
-                                                            fill="currentColor"
-                                                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
-                                                        ></path>
-                                                    </svg>
-                                                    {node.pointx6}
-                                                </p>
-                                            </div>
+                                            {allDatoCmsArticlePoint.edges.map(
+                                                ({ node }) => (
+                                                    <div className="w-full lg:w-6/12 xl:w-4/12 mb-4">
+                                                        <p className="flex items-center">
+                                                            <svg
+                                                                className="w-4 h-4 mr-2 text-green-600"
+                                                                role="img"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 512 512"
+                                                            >
+                                                                <path
+                                                                    fill="currentColor"
+                                                                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                                                                ></path>
+                                                            </svg>
+                                                            {node.point}
+                                                        </p>
+                                                    </div>
+                                                )
+                                            )}
                                         </div>
                                         <Link
                                             to="/#contact"
@@ -806,7 +731,7 @@ const IndexPage = ({ data }) => {
                 </section>
             </section>
 
-            <section className="relative h-96 overflow-hidden max-w-[2000px] flex flex-col items-center justify-center">
+            {/* <section className="relative h-96 overflow-hidden max-w-[2000px] flex flex-col items-center justify-center">
                 <div className="absolute w-full h-full bg-gradient-to-t from-black/90 to-gray-800/90 top-0 left-0 z-20" />
                 <StaticImage
                     quality={60}
@@ -846,7 +771,7 @@ const IndexPage = ({ data }) => {
                         </div>
                     </div>
                 ))}
-            </section>
+            </section> */}
 
             <section className="text-gray-600 body-font">
                 <div className="container py-6 md:py-12 px-5 pt-10 mx-auto">
@@ -940,7 +865,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-2xl">
                         <h2 className="text-[#168585] font-bold text-lg mb-1 title-font">
-                        Form
+                            Form
                         </h2>
                         <p className="leading-relaxed mb-5 text-gray-600">
                             Write to us, we will reply within 24 hours
@@ -1166,6 +1091,13 @@ export const query = graphql`
                 }
             }
         }
+        allDatoCmsArticlePoint {
+            edges {
+                node {
+                    point
+                }
+            }
+        }
         allDatoCmsArticle {
             edges {
                 node {
@@ -1175,12 +1107,6 @@ export const query = graphql`
                         alt
                         gatsbyImageData
                     }
-                    pointx1
-                    pointx2
-                    pointx3
-                    pointx4
-                    pointx5
-                    pointx6
                 }
             }
         }
