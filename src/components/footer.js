@@ -153,7 +153,7 @@ const Footer = () => (
 
                         <div>
                             <Link
-                                to="/cookies"
+                                to="/privacy-policy"
                                 className=" transition duration-100 hoverLink"
                             >
                                 Cookies
