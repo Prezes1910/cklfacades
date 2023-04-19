@@ -41,7 +41,7 @@ const AboutUsPL = ({ data: { allDatoCmsShowmoreCopy1 } }) => {
 
 export const query = graphql`
     query MyQuery {
-        allDatoCmsShowmoreCopy1 {
+        allDatoCmsShowmoreCopy1(sort: { meta: { firstPublishedAt: DESC } }) {
             edges {
                 node {
                     description

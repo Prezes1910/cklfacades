@@ -41,7 +41,7 @@ const AboutUs = ({ data: { allDatoCmsShowmore } }) => {
 
 export const query = graphql`
     query MyQuery {
-        allDatoCmsShowmore {
+        allDatoCmsShowmore(sort: {meta: {firstPublishedAt: DESC}}) {
             edges {
                 node {
                     description
