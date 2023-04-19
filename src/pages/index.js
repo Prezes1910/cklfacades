@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <section className="relative flex items-center min-h-[16rem] justify-center w-full overflow-hidden">
-                <button
+                {/* <button
                     onClick={HandleLanguage}
                     className="absolute flex items-center justify-center top-[2.2vh] sm:top-[1.5vh] lg:top-10 z-[99] right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100"
                 >
@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
                             <p className="ml-2">Polish</p>
                         </Link>
                     </div>
-                </button>
+                </button> */}
                 <div className="relative -mt-8 w-full -z-20">
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
