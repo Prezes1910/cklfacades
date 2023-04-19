@@ -91,7 +91,7 @@ const IndexPage = ({ data }) => {
 
                 <div className="absolute flex flex-col items-center justify-cente">
                     {allDatoCmsHeroTitle.edges.map(({ node }) => (
-                        <h1 className="text-xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
+                        <h1 className="text-xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[70%] px-6">
                             {node.heroTitle}
                         </h1>
                     ))}
