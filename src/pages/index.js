@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { useState } from "react";
+// import { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -15,19 +15,16 @@ const IndexPage = ({ data }) => {
         allDatoCmsAdvantage,
         allDatoCmsProjectHeader,
         allDatoCmsProjectArticle,
-        allDatoCmsChooseAPlan,
-        allDatoCmsPlanCard,
         allDatoCmsArticle,
         allDatoCmsArticlePoint,
-        allDatoCmsNumberSection,
         allDatoCmsBadgesHeader,
         allDatoCmsBadgesPotin,
     } = data;
 
-    const [changeLanguage, setLanguage] = useState(false);
-    const HandleLanguage = () => {
-        setLanguage(!changeLanguage);
-    };
+    // const [changeLanguage, setLanguage] = useState(false);
+    // const HandleLanguage = () => {
+    //     setLanguage(!changeLanguage);
+    // };
     return (
         <Layout>
             <section className="relative flex items-center min-h-[16rem] justify-center w-full overflow-hidden">
@@ -96,12 +93,12 @@ const IndexPage = ({ data }) => {
                             {node.heroTitle}
                         </h1>
                     ))}
-                    <Link
+                    {/* <Link
                         to="/about-us"
                         className="mt-2 lg:mt-6 hover:bg-black transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
                     >
                         Show More
-                    </Link>
+                    </Link> */}
                 </div>
 
                 <div className="text-gray-300 hidden lg:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3">
@@ -129,7 +126,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section id="about" className="scroll-m-16 mt-10 mb-6 md:mb-16">
+            <section id="about" className="scroll-m-16 mt-10 md:mt-16 mb-6 md:mb-16">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -774,7 +771,7 @@ const IndexPage = ({ data }) => {
             </section> */}
 
             <section className="text-gray-600 body-font">
-                <div className="container py-6 md:py-12 px-5 pt-10 mx-auto">
+                <div className="container py-6 md:py-20 px-5 pt-10 mx-auto">
                     {allDatoCmsBadgesHeader.edges.map(({ node }) => (
                         <div className="text-center mb-6 lg:mb-20">
                             <h4 className="sm:text-3xl text-2xl font-bold text-center title-font text-gray-900 mb-4">
@@ -863,7 +860,12 @@ const IndexPage = ({ data }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-2xl">
+                    <form
+                        action="https://public.herotofu.com/v1/c2695700-df4e-11ed-8a44-d1f0173776c3"
+                        method="post"
+                        accept-charset="UTF-8"
+                        className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-2xl"
+                    >
                         <h2 className="text-[#168585] font-bold text-lg mb-1 title-font">
                             Form
                         </h2>
@@ -929,14 +931,16 @@ const IndexPage = ({ data }) => {
                                 className="w-full bg-white rounded border border-gray-300 focus:border-gray-700 focus:ring-2 focus:ring-[#168585] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                             ></textarea>
                         </div>
-                        <button className="btn border-0 py-2 px-6 focus:outline-none  rounded text-lg">
+                        <button
+                            type="submit"
+                            className="btn border-0 py-2 px-6 focus:outline-none  rounded text-lg"
+                        >
                             Send Message
                         </button>
                         <p className="text-xs text-gray-500 mt-3">
-                            Chicharrones blog helvetica normcore iceland tousled
-                            brook viral artisan.
+                            CKL FACADES LTD
                         </p>
-                    </div>
+                    </form>
                 </div>
             </section>
         </Layout>
