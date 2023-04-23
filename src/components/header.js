@@ -189,7 +189,7 @@ const Header = () => {
                                 }
                                 to="/#contact"
                             >
-                                Contakt
+                                Contact
                             </Link>
                         </li>
                     </ul>
