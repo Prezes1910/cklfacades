@@ -26,8 +26,10 @@ const Footer = () => (
                     </div>
 
                     <p className="mb-6  sm:pr-8">
-                        Technical and design services to the building envelope
-                        and facade industry
+                        The Façade Designers You Can Trust !
+                        <br />
+                        Registered in England and Wales
+                        <br /> Company Reg. No: 14658436
                     </p>
 
                     <div className="flex">

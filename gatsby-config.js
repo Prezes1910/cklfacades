@@ -5,7 +5,7 @@
 module.exports = {
     pathPrefix: "/CKL-Facades",
     siteMetadata: {
-        title: `Building envelope and facade design`,
+        title: ``,
         description: `Technical and design services to the building envelope and facade industry`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
