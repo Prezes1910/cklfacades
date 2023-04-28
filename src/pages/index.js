@@ -233,7 +233,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section className="pt-6 lg:pt-16">
+            {/* <section className="pt-6 lg:pt-16">
                 <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
                     {allDatoCmsAdvantage.edges.map(({ node }) => (
                         <div className="rounded-lg bg-gray-100 shadow-md px-4 py-6 md:py-8 lg:py-12">
@@ -375,7 +375,7 @@ const IndexPage = ({ data }) => {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             <section className="max-w-screen-xl mt-12 px-6 lg:px-12 mx-auto">
                 <div className="lg:mb-12 text-gray-800 text-center lg:text-left">
@@ -855,7 +855,7 @@ const IndexPage = ({ data }) => {
                                     to="tel:+447546677411"
                                     className="leading-relaxed"
                                 >
-                                    +447546677411
+                                    +44 7459 184156
                                 </Link>
                             </div>
                         </div>
