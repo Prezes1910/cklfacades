@@ -9,10 +9,11 @@ module.exports = {
         description: `Technical and design services to the building envelope and facade industry`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
-        titlePL: `Projekt przegród budowlanych i elewacji`,
+        titlePL: ``,
         descriptionPL: `Usługi techniczne i projektowe dla przemysłu przegród budowlanych i elewacji`,
         authorPL: `Seovileo`,
         siteUrlPL: `https://seovileo.pl/`,
+        showSite: true,
     },
     plugins: [
         {
@@ -46,10 +47,10 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-              name: `src`,
-              path: `${__dirname}/src`,
+                name: `src`,
+                path: `${__dirname}/src`,
             },
-          },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-// import { useState } from "react";
+import { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -12,7 +12,6 @@ const IndexPage = ({ data }) => {
         allDatoCmsAbout,
         allDatoCmsAboutArticle,
         allDatoCmsInfoSection,
-        allDatoCmsAdvantage,
         allDatoCmsProjectHeader,
         allDatoCmsProjectArticle,
         allDatoCmsArticle,
@@ -21,61 +20,65 @@ const IndexPage = ({ data }) => {
         allDatoCmsBadgesPotin,
     } = data;
 
-    // const [changeLanguage, setLanguage] = useState(false);
-    // const HandleLanguage = () => {
-    //     setLanguage(!changeLanguage);
-    // };
+    const [changeLanguage, setLanguage] = useState(false);
+    const HandleLanguage = () => {
+        setLanguage(!changeLanguage);
+    };
+
+    const showSite = data.allDatoCmsPolishSite.edges[0].node.showSite;
     return (
         <Layout>
             <section className="relative flex items-center min-h-[16rem] justify-center w-full overflow-hidden">
-                {/* <button
-                    onClick={HandleLanguage}
-                    className="absolute flex items-center justify-center top-[2.2vh] sm:top-[1.5vh] lg:top-10 z-[99] right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100"
-                >
-                    <StaticImage
-                        height={20}
-                        width={20}
-                        alt="uk"
-                        placeholder="blurred"
-                        src="../assets/language/uk.png"
-                    />
-                    <div
-                        className={
-                            changeLanguage
-                                ? "absolute flex flex-col items-center justify-start rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-100 transition-transform duration-50"
-                                : "absolute rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-50"
-                        }
+                {showSite && (
+                    <button
+                        onClick={HandleLanguage}
+                        className="absolute flex items-center justify-center top-[2.2vh] sm:top-[1.5vh] lg:top-10 z-[99] right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100"
                     >
-                        <Link
-                            to="/"
-                            className="flex items-center justify-start px-6 w-full hover:bg-gray-700"
+                        <StaticImage
+                            height={20}
+                            width={20}
+                            alt="uk"
+                            placeholder="blurred"
+                            src="../assets/language/uk.png"
+                        />
+                        <div
+                            className={
+                                changeLanguage
+                                    ? "absolute flex flex-col items-center justify-start rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-100 transition-transform duration-50"
+                                    : "absolute rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-50"
+                            }
                         >
-                            <StaticImage
-                                height={12}
-                                width={12}
-                                layout="fixed"
-                                alt="uk"
-                                placeholder="blurred"
-                                src="../assets/language/uk.png"
-                            />
-                            <p className="ml-2">English</p>
-                        </Link>
-                        <Link
-                            to="/pl"
-                            className="flex items-center justify-start px-6 mt-3 w-full hover:bg-gray-700"
-                        >
-                            <StaticImage
-                                height={12}
-                                width={12}
-                                layout="fixed"
-                                placeholder="blurred"
-                                alt="poland"
-                                src="../assets/language/poland.png"
-                            />
-                            <p className="ml-2">Polish</p>
-                        </Link>
-                    </div>
-                </button> */}
+                            <Link
+                                to="/"
+                                className="flex items-center justify-start px-6 w-full hover:bg-gray-700"
+                            >
+                                <StaticImage
+                                    height={12}
+                                    width={12}
+                                    layout="fixed"
+                                    alt="uk"
+                                    placeholder="blurred"
+                                    src="../assets/language/uk.png"
+                                />
+                                <p className="ml-2">English</p>
+                            </Link>
+                            <Link
+                                to="/pl"
+                                className="flex items-center justify-start px-6 mt-3 w-full hover:bg-gray-700"
+                            >
+                                <StaticImage
+                                    height={12}
+                                    width={12}
+                                    layout="fixed"
+                                    placeholder="blurred"
+                                    alt="poland"
+                                    src="../assets/language/poland.png"
+                                />
+                                <p className="ml-2">Polish</p>
+                            </Link>
+                        </div>
+                    </button>
+                )}
                 <div className="relative -mt-8 w-full -z-20">
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
@@ -126,7 +129,10 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section id="about" className="scroll-m-16 mt-10 md:mt-16 mb-6 md:mb-16">
+            <section
+                id="about"
+                className="scroll-m-16 mt-10 md:mt-16 mb-6 md:mb-16"
+            >
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -1099,6 +1105,13 @@ export const query = graphql`
             edges {
                 node {
                     point
+                }
+            }
+        }
+        allDatoCmsPolishSite {
+            edges {
+                node {
+                    showSite
                 }
             }
         }
